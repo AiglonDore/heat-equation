@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['what_15',['what',['../class_exn.html#abc009e9a561cfa7ce15c307c36acab1e',1,'Exn']]]
+  ['ismaterial_31',['isMaterial',['../class_material.html#ab0d44f17c28a4928052f021fd2c8d2d5',1,'Material']]]
 ];

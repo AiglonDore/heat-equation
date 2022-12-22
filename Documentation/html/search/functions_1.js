@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['main_14',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]]
+  ['getdensity_28',['getDensity',['../class_material.html#a5790aca903dbc72bbc2d086fbc4b8e74',1,'Material']]],
+  ['getspecificheatcapacity_29',['getSpecificHeatCapacity',['../class_material.html#a72e97739e7856cf4939d0a1b3d969f0c',1,'Material']]],
+  ['getthermalconductivity_30',['getThermalConductivity',['../class_material.html#a29c6d17f98cacf4ec0477a30994f3712',1,'Material']]]
 ];

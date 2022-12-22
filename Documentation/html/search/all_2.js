@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['licence_4',['LICENCE',['../md__l_i_c_e_n_c_e.html',1,'']]]
+  ['heat_20equation_20resolution_6',['Heat equation resolution',['../md__r_e_a_d_m_e.html',1,'']]]
 ];

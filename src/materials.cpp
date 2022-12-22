@@ -1,5 +1,5 @@
 /**
- * @file material.cpp
+ * @file materials.cpp
  * @author Thomas Roiseux
  * @brief Implements material data.
  * @version 0.1

@@ -4,9 +4,9 @@
 # Project related configuration options
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = UTF-8
-PROJECT_NAME           = "Black-Scholes equation"
+PROJECT_NAME           = "Heat equation"
 PROJECT_NUMBER         = 0.1
-PROJECT_BRIEF          = "Black-Scholes equation resolution program"
+PROJECT_BRIEF          = "Heat equation resolution program"
 PROJECT_LOGO           =
 OUTPUT_DIRECTORY       = Documentation
 CREATE_SUBDIRS         = NO

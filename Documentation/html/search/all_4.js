@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['what_7',['what',['../class_exn.html#abc009e9a561cfa7ce15c307c36acab1e',1,'Exn']]]
+  ['licence_8',['LICENCE',['../md__l_i_c_e_n_c_e.html',1,'']]]
 ];
