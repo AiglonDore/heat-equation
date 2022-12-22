@@ -1,0 +1,12 @@
+<map id="src/bar.cpp" name="src/bar.cpp">
+<area shape="rect" id="node1" title="Implements bar.h." alt="" coords="261,5,353,32"/>
+<area shape="rect" id="node2" href="$bar_8h.html" title="Provides." alt="" coords="90,80,205,107"/>
+<area shape="rect" id="node6" href="$exn_8h.html" title="Provides the Exn class to deal with exceptions." alt="" coords="411,80,529,107"/>
+<area shape="rect" id="node9" href="$materials_8h.html" title="Provides material data." alt="" coords="229,80,386,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,155,92,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="203,155,262,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="116,155,179,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="395,155,481,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="505,155,592,181"/>
+<area shape="rect" id="node10" title=" " alt="" coords="286,155,337,181"/>
+</map>

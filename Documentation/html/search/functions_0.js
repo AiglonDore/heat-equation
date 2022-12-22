@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['exn_27',['Exn',['../class_exn.html#a0341d804f8d076df6906a769dab2a520',1,'Exn::Exn()'],['../class_exn.html#a72b7c08ac82d31b9270c54a17491d03e',1,'Exn::Exn(const char *msg)']]]
+  ['bar_36',['Bar',['../class_bar.html#aee179d14a7dbafe6d65e893344bc54aa',1,'Bar']]]
 ];

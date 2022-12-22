@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['_7eexn_18',['~Exn',['../class_exn.html#a4fbfdfdb441877cab8e2e2b1ec3249bf',1,'Exn']]],
-  ['_7ematerial_19',['~Material',['../class_material.html#a2c19452d71f54075df8f5405b03129f4',1,'Material']]]
+  ['parsearguments_19',['parseArguments',['../main_8cpp.html#a1ec8779b895b33a6971f32d7775a117b',1,'main.cpp']]],
+  ['printhelp_20',['printHelp',['../main_8cpp.html#a60d72eb821466c260997c208ec2ce0ab',1,'main.cpp']]]
 ];
