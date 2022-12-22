@@ -8,7 +8,7 @@ endif
 
 all : heat-equation.out
 
-heat-equation.out : obj/main.o obj/exn.o obj/materials.o
+heat-equation.out : obj/main.o obj/exn.o obj/materials.o obj/bar.o
 	$(CC) $(CFLAGS) -o bin/$@ $^ `pkg-config --cflags --libs sdl2`
 
 obj/main.o : src/main.cpp header/exn.h header/materials.h
@@ -18,6 +18,9 @@ obj/exn.o : src/exn.cpp header/exn.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 obj/materials.o : src/materials.cpp header/materials.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+obj/bar.o : src/bar.cpp header/bar.h header/exn.h header/materials.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean :

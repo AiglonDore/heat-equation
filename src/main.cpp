@@ -12,8 +12,11 @@
 #include <iostream>
 #include <cstring>
 #include <string>
+#include <vector>
+#include <fstream>
 #include "../header/exn.h"
 #include "../header/materials.h"
+#include "../header/bar.h"
 
 using namespace std;
 
@@ -29,7 +32,7 @@ void printHelp(const char *arg)
     cout << "  -v, --version\t\tDisplay version information." << endl;
     cout << "  -m, --material\tNew material to add." << endl;
     cout << "  -p, --plate\t\tPlate to use. If this option is used, then <W> is mandatory." << endl;
-    cout << "  -f, --file\t\tOutput will also be written in the given file." << endl;
+    cout << "  -f, --file\t\tOutput will also be written in the given file, using CSV notation." << endl;
     cout << "  -n, --no-gui\t\tNo GUI will be displayed. Output will be in stdout." << endl;
 }
 
@@ -45,6 +48,8 @@ void printHelp(const char *arg)
  * @param material Material
  * @param plate If the plate is used.
  * @param W Width in case of plate.
+ * @param filename File to write output.
+ * @param nogui If the GUI is used.
  * @throws Exn If not enough arguments for material creation.
  */
 void parseArguments(int argc, char *argv[], double &u0, double &L, double &tMax, double &f, string &material, bool &plate, double &W, string &filename, bool &nogui)
@@ -161,9 +166,33 @@ int main(int argc, char *argv[])
     try
     {
         parseArguments(argc, argv, u0, L, tMax, f, material, plate, W, filename, nogui);
-        if (plate)
+        if (!plate)
         {
-            
+            vector<double> time, sol;
+            Bar bar(u0, L, tMax, f, material);
+            bar.solve(time, sol);
+            if (filename != "")
+            {
+                ofstream file(filename);
+                file << "t,u" << endl;
+                for (size_t i = 0; i < time.size(); i++)
+                {
+                    file << time[i] << "," << sol[i] << endl;
+                }
+                file.close();
+            }
+            if (!nogui)
+            {
+                
+            }
+            else
+            {
+                cout << "t\tu" << endl;
+                for (size_t i = 0; i < time.size(); i++)
+                {
+                    cout << time[i] << "," << sol[i] << endl;
+                }
+            }
         }
         else
         {
