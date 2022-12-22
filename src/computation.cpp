@@ -13,6 +13,7 @@
 
 #include <thread>
 #include <iostream>
+#include <fstream>
 
 void solveBar(const Bar &bar, const std::string& filename, bool nogui)
 {
@@ -33,5 +34,17 @@ void solveBar(const Bar &bar, const std::string& filename, bool nogui)
     for (unsigned int i = 0; i < nbThreadsAvailable; i++)
     {
         threads[i].join();
+    }
+
+    std::cout << "Solution computed." << std::endl;
+    if (filename != "")
+    {
+        std::ofstream file(filename);
+        if (!file.is_open())
+        {
+            throw std::runtime_error("Unable to open file " + filename);
+        }
+        file.close();
+        std::cout << "Solution saved in " << filename << std::endl;
     }
 }
