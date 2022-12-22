@@ -28,7 +28,9 @@ void printHelp(const char *arg)
     cout << "  -h, --help\t\tDisplay this help message." << endl;
     cout << "  -v, --version\t\tDisplay version information." << endl;
     cout << "  -m, --material\tNew material to add." << endl;
-    cout << "  -p, --plate\t\tPlate to use." << endl;
+    cout << "  -p, --plate\t\tPlate to use. If this option is used, then <W> is mandatory." << endl;
+    cout << "  -f, --file\t\tOutput will also be written in the given file." << endl;
+    cout << "  -n, --no-gui\t\tNo GUI will be displayed. Output will be in stdout." << endl;
 }
 
 /**
@@ -45,7 +47,7 @@ void printHelp(const char *arg)
  * @param W Width in case of plate.
  * @throws Exn If not enough arguments for material creation.
  */
-void parseArguments(int argc, char *argv[], double &u0, double &L, double &tMax, double &f, string &material, bool &plate, double &W)
+void parseArguments(int argc, char *argv[], double &u0, double &L, double &tMax, double &f, string &material, bool &plate, double &W, string &filename, bool &nogui)
 {
     if (argc == 1)
     {
@@ -74,10 +76,6 @@ void parseArguments(int argc, char *argv[], double &u0, double &L, double &tMax,
         }
         if (strcmp(argv[i], "-m") == 0 || strcmp(argv[i], "--material") == 0)
         {
-            if (argc < i + 5)
-            {
-                throw Exn("Not enough arguments for material creation.");
-            }
             string name = argv[i + 1];
             double lambda;
             if (!sscanf(argv[i + 2], "%lf", &lambda) || lambda < 0)
@@ -93,6 +91,18 @@ void parseArguments(int argc, char *argv[], double &u0, double &L, double &tMax,
 
             cout << "Material \"" << name << "\" created." << endl;
             i += 4;
+        }
+        else if (strcmp(argv[i], "-f") == 0 || strcmp(argv[i], "--file") == 0)
+        {
+            if (argc == i + 1)
+                throw Exn("Not enough arguments.");
+            filename = argv[i + 1];
+            i++;
+            cout << "Output will also be written in \"" << filename << "\"." << endl;
+        }
+        else if (strcmp(argv[i], "-n") == 0 || strcmp(argv[i], "--no-gui") == 0)
+        {
+            nogui = true;
         }
         else if (material == "")
         {
@@ -128,6 +138,10 @@ void parseArguments(int argc, char *argv[], double &u0, double &L, double &tMax,
             throw Exn("Too many arguments.");
         }
     }
+    if (u0 < 0 || tMax < 0 || f < 0 || L < 0 || material == "" || (plate && W < 0))
+    {
+        throw Exn("Not enough arguments.");
+    }
 }
 
 /**
@@ -141,11 +155,12 @@ int main(int argc, char *argv[])
 {
     cout << "\t\t----- Heat Equation Solver -----" << endl;
     double u0 = -1, L = -1, tMax = -1, f = -1, W = -1;
-    string material = "";
+    string material = "", filename = "";
     bool plate = false;
+    bool nogui = false;
     try
     {
-        parseArguments(argc, argv, u0, L, tMax, f, material, plate, W);
+        parseArguments(argc, argv, u0, L, tMax, f, material, plate, W, filename, nogui);
         if (plate)
         {
             
