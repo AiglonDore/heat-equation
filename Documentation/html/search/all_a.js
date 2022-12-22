@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['what_22',['what',['../class_exn.html#abc009e9a561cfa7ce15c307c36acab1e',1,'Exn']]]
+  ['solve_27',['solve',['../class_bar.html#aab9fcb7f6179648aada1935fbabfa384',1,'Bar']]],
+  ['solvebar_28',['solveBar',['../computation_8h.html#adbb6a6e1d20fc59b4678e9d0d6218a7d',1,'solveBar(const Bar &amp;bar, const std::string &amp;filename, bool nogui):&#160;computation.cpp'],['../computation_8cpp.html#adbb6a6e1d20fc59b4678e9d0d6218a7d',1,'solveBar(const Bar &amp;bar, const std::string &amp;filename, bool nogui):&#160;computation.cpp']]]
 ];

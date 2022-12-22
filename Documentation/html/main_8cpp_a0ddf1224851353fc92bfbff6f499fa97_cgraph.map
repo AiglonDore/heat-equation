@@ -1,6 +1,6 @@
 <map id="main" name="main">
 <area shape="rect" id="node1" title="Main function." alt="" coords="5,31,60,57"/>
 <area shape="rect" id="node2" href="$main_8cpp.html#a1ec8779b895b33a6971f32d7775a117b" title="Parse arguments." alt="" coords="108,5,237,32"/>
-<area shape="rect" id="node4" href="$class_bar.html#a0c623329e54853ae687a774d72763add" title="Solve the bar model." alt="" coords="129,56,216,83"/>
+<area shape="rect" id="node4" href="$computation_8h.html#adbb6a6e1d20fc59b4678e9d0d6218a7d" title="Solve the bar." alt="" coords="133,56,212,83"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#a60d72eb821466c260997c208ec2ce0ab" title="Print help." alt="" coords="285,5,368,32"/>
 </map>

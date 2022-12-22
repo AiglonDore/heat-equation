@@ -80,7 +80,7 @@ Collaboration diagram for Bar:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_bar__coll__graph.png" border="0" usemap="#a_bar_coll__map" alt="Collaboration graph"/></div>
 <map name="a_bar_coll__map" id="a_bar_coll__map">
-<area shape="rect" title="Class for the bar model." alt="" coords="5,5,88,112"/>
+<area shape="rect" title="Class for the bar model." alt="" coords="5,5,109,171"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -93,9 +93,21 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bar.html#a9c7ebea0c189423591741ac438985316">~Bar</a> ()</td></tr>
 <tr class="memdesc:a9c7ebea0c189423591741ac438985316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_bar.html" title="Class for the bar model.">Bar</a> object. <br /></td></tr>
 <tr class="separator:a9c7ebea0c189423591741ac438985316"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c623329e54853ae687a774d72763add"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bar.html#a0c623329e54853ae687a774d72763add">solve</a> (std::vector&lt; double &gt; &amp;time, std::vector&lt; double &gt; &amp;sol) const</td></tr>
-<tr class="memdesc:a0c623329e54853ae687a774d72763add"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the bar model.  <a href="class_bar.html#a0c623329e54853ae687a774d72763add">More...</a><br /></td></tr>
-<tr class="separator:a0c623329e54853ae687a774d72763add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f55cbc43fc64ad7219e61cb44d156b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bar.html#aa1f55cbc43fc64ad7219e61cb44d156b">getU0</a> () const</td></tr>
+<tr class="memdesc:aa1f55cbc43fc64ad7219e61cb44d156b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the U0 object.  <a href="class_bar.html#aa1f55cbc43fc64ad7219e61cb44d156b">More...</a><br /></td></tr>
+<tr class="separator:aa1f55cbc43fc64ad7219e61cb44d156b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed959fd048ad91636b51f358538786e1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bar.html#aed959fd048ad91636b51f358538786e1">getL</a> () const</td></tr>
+<tr class="memdesc:aed959fd048ad91636b51f358538786e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the L object.  <a href="class_bar.html#aed959fd048ad91636b51f358538786e1">More...</a><br /></td></tr>
+<tr class="separator:aed959fd048ad91636b51f358538786e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a9ee570a559374dc3a4ffed850be14a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bar.html#a3a9ee570a559374dc3a4ffed850be14a">getTMax</a> () const</td></tr>
+<tr class="memdesc:a3a9ee570a559374dc3a4ffed850be14a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the TMax object.  <a href="class_bar.html#a3a9ee570a559374dc3a4ffed850be14a">More...</a><br /></td></tr>
+<tr class="separator:a3a9ee570a559374dc3a4ffed850be14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a454da55db7642fb5db70b1419ad6f842"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bar.html#a454da55db7642fb5db70b1419ad6f842">getF</a> () const</td></tr>
+<tr class="memdesc:a454da55db7642fb5db70b1419ad6f842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the F object.  <a href="class_bar.html#a454da55db7642fb5db70b1419ad6f842">More...</a><br /></td></tr>
+<tr class="separator:a454da55db7642fb5db70b1419ad6f842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab9fcb7f6179648aada1935fbabfa384"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bar.html#aab9fcb7f6179648aada1935fbabfa384">solve</a> (const std::vector&lt; double &gt; &amp;time, std::vector&lt; std::vector&lt; double &gt;&gt; &amp;sol) const</td></tr>
+<tr class="memdesc:aab9fcb7f6179648aada1935fbabfa384"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the bar model.  <a href="class_bar.html#aab9fcb7f6179648aada1935fbabfa384">More...</a><br /></td></tr>
+<tr class="separator:aab9fcb7f6179648aada1935fbabfa384"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for the bar model. </p>
@@ -186,8 +198,128 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0c623329e54853ae687a774d72763add"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c623329e54853ae687a774d72763add">&#9670;&nbsp;</a></span>solve()</h2>
+<a id="a454da55db7642fb5db70b1419ad6f842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a454da55db7642fb5db70b1419ad6f842">&#9670;&nbsp;</a></span>getF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Bar::getF </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the F object. </p>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="bar_8h_source.html#l00076">76</a> of file <a class="el" href="bar_8h_source.html">bar.h</a>.</p>
+
+</div>
+</div>
+<a id="aed959fd048ad91636b51f358538786e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed959fd048ad91636b51f358538786e1">&#9670;&nbsp;</a></span>getL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Bar::getL </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the L object. </p>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="bar_8h_source.html#l00062">62</a> of file <a class="el" href="bar_8h_source.html">bar.h</a>.</p>
+
+</div>
+</div>
+<a id="a3a9ee570a559374dc3a4ffed850be14a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a9ee570a559374dc3a4ffed850be14a">&#9670;&nbsp;</a></span>getTMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Bar::getTMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the TMax object. </p>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="bar_8h_source.html#l00069">69</a> of file <a class="el" href="bar_8h_source.html">bar.h</a>.</p>
+
+</div>
+</div>
+<a id="aa1f55cbc43fc64ad7219e61cb44d156b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f55cbc43fc64ad7219e61cb44d156b">&#9670;&nbsp;</a></span>getU0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Bar::getU0 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the U0 object. </p>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="bar_8h_source.html#l00055">55</a> of file <a class="el" href="bar_8h_source.html">bar.h</a>.</p>
+
+</div>
+</div>
+<a id="aab9fcb7f6179648aada1935fbabfa384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab9fcb7f6179648aada1935fbabfa384">&#9670;&nbsp;</a></span>solve()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -195,13 +327,13 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void Bar::solve </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>time</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; double &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>sol</em>&#160;</td>
         </tr>
         <tr>
@@ -222,15 +354,6 @@ Here is the call graph for this function:</div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="bar_8cpp_source.html#l00047">47</a> of file <a class="el" href="bar_8cpp_source.html">bar.cpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_bar_a0c623329e54853ae687a774d72763add_icgraph.png" border="0" usemap="#aclass_bar_a0c623329e54853ae687a774d72763add_icgraph" alt=""/></div>
-<map name="aclass_bar_a0c623329e54853ae687a774d72763add_icgraph" id="aclass_bar_a0c623329e54853ae687a774d72763add_icgraph">
-<area shape="rect" title="Solve the bar model." alt="" coords="108,5,195,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
-</map>
-</div>
 
 </div>
 </div>
