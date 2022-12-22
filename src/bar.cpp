@@ -44,11 +44,7 @@ Bar::~Bar()
 {
 }
 
-void Bar::solve(std::vector<double>& time, std::vector<double>& sol) const
+void Bar::solve(const std::vector<double>& time, std::vector<std::vector<double>>& sol) const
 {
     const Material& mat = Material::materials[material];
-    for (double t = 0; t <= tMax; t += tMax / (N - 1))
-    {
-        time.push_back(t);
-    }
 }

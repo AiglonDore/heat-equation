@@ -48,12 +48,40 @@ public:
     ~Bar();
 
     /**
+     * @brief Get the U0 object.
+     * 
+     * @return double 
+     */
+    double getU0() const { return u0; };
+
+    /**
+     * @brief Get the L object.
+     * 
+     * @return double 
+     */
+    double getL() const { return L; };
+
+    /**
+     * @brief Get the TMax object.
+     * 
+     * @return double 
+     */
+    double getTMax() const { return tMax; };
+
+    /**
+     * @brief Get the F object.
+     * 
+     * @return double 
+     */
+    double getF() const { return f; };
+
+    /**
      * @brief Solve the bar model.
      * 
      * @param time Vector of time.
      * @param sol Vector of solution.
      */
-    void solve(std::vector<double>& time, std::vector<double>& sol) const;
+    void solve(const std::vector<double>& time, std::vector<std::vector<double>>& sol) const;
 };
 
 #endif // BAR_H

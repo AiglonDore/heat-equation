@@ -17,6 +17,7 @@
 #include "../header/exn.h"
 #include "../header/materials.h"
 #include "../header/bar.h"
+#include "../header/computation.h"
 
 using namespace std;
 
@@ -168,40 +169,18 @@ int main(int argc, char *argv[])
         parseArguments(argc, argv, u0, L, tMax, f, material, plate, W, filename, nogui);
         if (!plate)
         {
-            vector<double> time, sol;
             Bar bar(u0, L, tMax, f, material);
-            bar.solve(time, sol);
-            if (filename != "")
-            {
-                ofstream file(filename);
-                file << "t,u" << endl;
-                for (size_t i = 0; i < time.size(); i++)
-                {
-                    file << time[i] << "," << sol[i] << endl;
-                }
-                file.close();
-            }
-            if (!nogui)
-            {
-                
-            }
-            else
-            {
-                cout << "t\tu" << endl;
-                for (size_t i = 0; i < time.size(); i++)
-                {
-                    cout << time[i] << "," << sol[i] << endl;
-                }
-            }
+            solveBar(bar, filename, nogui);
         }
         else
         {
-
+            // Plate plate(u0, L, tMax, f, material, W);
+            // solvePlate(plate, filename, nogui);
         }
     }
     catch (const std::exception &e)
     {
-        std::cerr << e.what() << '\n';
+        std::cerr << e.what() << std::endl;
     }
 
     return 0;
