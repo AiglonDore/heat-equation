@@ -23,6 +23,7 @@ void solveBar(const Bar &bar, const std::string& filename, bool nogui)
     
     std::vector<double> time;
     std::vector<double> position;
+    std::vector<std::vector<double>> sol;
 
     double dt = tMax / 1000;
     std::thread timeThread([&time, tMax, dt]()
@@ -46,7 +47,10 @@ void solveBar(const Bar &bar, const std::string& filename, bool nogui)
     std::cout << "Computing solution using " << nbThreadsAvailable << " threads." << std::endl;
     std::vector<std::thread> threads(nbThreadsAvailable);
 
-    
+    for (size_t i = 0; i < nbThreadsAvailable; i++)
+    {
+        threads[i]= std::thread(Bar::solveBar,std::ref(bar), std::ref(time), std::ref(position), std::ref(sol), i);
+    }
 
     for (unsigned int i = 0; i < nbThreadsAvailable; i++)
     {

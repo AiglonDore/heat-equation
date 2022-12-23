@@ -81,8 +81,22 @@ public:
      * @param time Vector of time.
      * @param position Vector of position.
      * @param sol Vector of solution.
+     * 
+     * @param index Index of the solution.
      */
-    void solve(const std::vector<double>& time, const std::vector<double> position, std::vector<std::vector<double>>& sol) const;
+    void solve(const std::vector<double>& time, const std::vector<double> position, std::vector<std::vector<double>>& sol, size_t index) const;
+
+    /**
+     * @brief Solve the bar model.
+     * 
+     * @param bar Bar.
+     * @param time Vector of time.
+     * @param position Vector of position.
+     * @param sol Vector of solution.
+     * 
+     * @param index Index of the solution.
+     */
+    static void solveBar(const Bar& bar, const std::vector<double>& time, const std::vector<double> position, std::vector<std::vector<double>>& sol, size_t index);
 };
 
 #endif // BAR_H
