@@ -43,19 +43,7 @@ void solveBar(const Bar &bar, const std::string& filename, bool nogui)
     timeThread.join();
     positionThread.join();
 
-    unsigned int nbThreadsAvailable = std::thread::hardware_concurrency();
-    std::cout << "Computing solution using " << nbThreadsAvailable << " threads." << std::endl;
-    std::vector<std::thread> threads(nbThreadsAvailable);
-
-    for (size_t i = 0; i < nbThreadsAvailable; i++)
-    {
-        threads[i]= std::thread(Bar::solveBar,std::ref(bar), std::ref(time), std::ref(position), std::ref(sol), i);
-    }
-
-    for (unsigned int i = 0; i < nbThreadsAvailable; i++)
-    {
-        threads[i].join();
-    }
+    bar.solve(time, position, sol);
 
     std::cout << "Solution computed." << std::endl;
     if (filename != "")

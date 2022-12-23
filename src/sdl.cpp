@@ -10,6 +10,7 @@
  */
 
 #include "../header/sdl.h"
+#include "../header/exn.h"
 
 Sdl::Sdl(/* args */)
 {
@@ -21,7 +22,10 @@ Sdl::~Sdl()
 
 void Sdl::SdlBarRunWindow(const Bar& bar, const std::vector<double>& time, const std::vector<double> position, std::vector<std::vector<double>>& sol)
 {
-    SDL_Init(SDL_INIT_VIDEO);
+    if (SDL_Init(SDL_INIT_VIDEO) != 0)
+    {
+        throw Exn((std::string("SDL_Init Error: ") + SDL_GetError()).c_str());
+    }
     SDL_Window* window = SDL_CreateWindow("Heat equation solution for a bar", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 640, 480, SDL_WINDOW_SHOWN);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     SDL_Event event;

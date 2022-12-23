@@ -46,15 +46,7 @@ Bar::~Bar()
 {
 }
 
-void Bar::solve(const std::vector<double>& time, const std::vector<double> position, std::vector<std::vector<double>>& sol, size_t index) const
+void Bar::solve(const std::vector<double>& time, const std::vector<double> position, std::vector<std::vector<double>>& sol) const
 {
     const Material& mat = Material::materials[material];
-}
-
-void Bar::solveBar(const Bar& bar, const std::vector<double>& time, const std::vector<double> position, std::vector<std::vector<double>>& sol, size_t index)
-{
-    for (size_t i = index; i < time.size(); i += std::thread::hardware_concurrency())
-    {
-        bar.solve(time, position, sol, i);
-    }
 }

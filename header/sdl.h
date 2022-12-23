@@ -38,7 +38,7 @@ public:
     ~Sdl();
     /**
      * @brief Run the SDL window.
-     * 
+     * @throws Exn if the window cannot be created.
      * @param bar Bar.
      * @param time Time values.
      * @param position Position values.
