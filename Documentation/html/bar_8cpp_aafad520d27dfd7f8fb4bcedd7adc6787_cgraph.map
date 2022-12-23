@@ -1,0 +1,6 @@
+<map id="makeAdAhn" name="makeAdAhn">
+<area shape="rect" id="node1" title="Compute the AdAhn matrix (first member of the equation)." alt="" coords="5,64,105,91"/>
+<area shape="rect" id="node2" href="$class_material.html#a5790aca903dbc72bbc2d086fbc4b8e74" title="Get the Density object." alt="" coords="197,5,351,32"/>
+<area shape="rect" id="node3" href="$class_material.html#a72e97739e7856cf4939d0a1b3d969f0c" title="Get the Specific Heat Capacity object." alt="" coords="181,57,367,98"/>
+<area shape="rect" id="node4" href="$class_material.html#a29c6d17f98cacf4ec0477a30994f3712" title="Get the Thermal Conductivity object." alt="" coords="153,123,395,149"/>
+</map>
