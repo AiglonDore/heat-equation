@@ -44,7 +44,7 @@ Bar::~Bar()
 {
 }
 
-void Bar::solve(const std::vector<double>& time, std::vector<std::vector<double>>& sol) const
+void Bar::solve(const std::vector<double>& time, const std::vector<double> position, std::vector<std::vector<double>>& sol) const
 {
     const Material& mat = Material::materials[material];
 }
