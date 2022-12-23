@@ -20,7 +20,7 @@ Sdl::~Sdl()
 {
 }
 
-void Sdl::SdlBarRunWindow(const Bar& bar, const std::vector<double>& time, const std::vector<double> position, std::vector<std::vector<double>>& sol)
+void Sdl::SdlBarRunWindow(const Bar& bar, const std::vector<double>& time, const std::vector<double>& position, std::vector<std::vector<double>>& sol)
 {
     if (SDL_Init(SDL_INIT_VIDEO) != 0)
     {

@@ -75,10 +75,27 @@ void solveBar(const Bar &bar, const std::string& filename, bool nogui)
 
     if (!nogui)
     {
+        std::cout << "Displaying solution in GUI..." << std::endl;
+        std::cout << "Initiating SDL..." << std::endl;
         Sdl::SdlBarRunWindow(bar, time, position, sol);
     }
     else
     {
+        std::cout << "Displaying solution in console..." << std::endl;
+        for (size_t i = 0; i < position.size(); i++)
+        {
+            std::cout << position[i] << ",";
+        }
+        std::cout << std::endl;
         
+        for (size_t i = 0; i < time.size(); i++)
+        {
+            std::cout << time[i] << ",";
+            for (size_t j = 0; j < position.size(); j++)
+            {
+                std::cout << sol[i][j] << ",";
+            }
+            std::cout << std::endl;
+        }
     }
 }

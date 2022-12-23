@@ -44,7 +44,7 @@ public:
      * @param position Position values.
      * @param sol Solution.
      */
-    static void SdlBarRunWindow(const Bar& bar, const std::vector<double>& time, const std::vector<double> position, std::vector<std::vector<double>>& sol);
+    static void SdlBarRunWindow(const Bar& bar, const std::vector<double>& time, const std::vector<double>& position, std::vector<std::vector<double>>& sol);
 };
 
 #endif // SDL_H
