@@ -26,9 +26,24 @@ class Sdl
 private:
     /* data */
 public:
+    /**
+     * @brief Construct a new Sdl object.
+     * 
+     */
     Sdl(/* args */);
+    /**
+     * @brief Destroy the Sdl object.
+     * 
+     */
     ~Sdl();
-
+    /**
+     * @brief Run the SDL window.
+     * 
+     * @param bar Bar.
+     * @param time Time values.
+     * @param position Position values.
+     * @param sol Solution.
+     */
     static void SdlBarRunWindow(const Bar& bar, const std::vector<double>& time, const std::vector<double> position, std::vector<std::vector<double>>& sol);
 };
 

@@ -128,23 +128,40 @@ $(function() {
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Unable to open file &quot;</span> + filename);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        file.close();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Solution saved in &quot;</span> &lt;&lt; filename &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (!nogui)</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; position.size(); i++)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            file &lt;&lt; position[i] &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        file &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; time.size(); i++)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            file &lt;&lt; time[i] &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; position.size(); j++)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                file &lt;&lt; sol[i][j] &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            file &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        file.close();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Solution saved in &quot;</span> &lt;&lt; filename &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> (!nogui)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="class_sdl.html#ae96fdface86768f26f93296d4ed9511e">Sdl::SdlBarRunWindow</a>(bar, time, position, sol);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
 <div class="ttc" id="aclass_bar_html"><div class="ttname"><a href="class_bar.html">Bar</a></div><div class="ttdoc">Class for the bar model.</div><div class="ttdef"><b>Definition:</b> <a href="bar_8h_source.html#l00023">bar.h:24</a></div></div>
 <div class="ttc" id="aclass_bar_html_a3a9ee570a559374dc3a4ffed850be14a"><div class="ttname"><a href="class_bar.html#a3a9ee570a559374dc3a4ffed850be14a">Bar::getTMax</a></div><div class="ttdeci">double getTMax() const</div><div class="ttdoc">Get the TMax object.</div><div class="ttdef"><b>Definition:</b> <a href="bar_8h_source.html#l00069">bar.h:69</a></div></div>
 <div class="ttc" id="aclass_bar_html_ad4de2e93998499a60aa387d8725544c2"><div class="ttname"><a href="class_bar.html#ad4de2e93998499a60aa387d8725544c2">Bar::solveBar</a></div><div class="ttdeci">static void solveBar(const Bar &amp;bar, const std::vector&lt; double &gt; &amp;time, const std::vector&lt; double &gt; position, std::vector&lt; std::vector&lt; double &gt;&gt; &amp;sol, size_t index)</div><div class="ttdoc">Solve the bar model.</div><div class="ttdef"><b>Definition:</b> <a href="bar_8cpp_source.html#l00054">bar.cpp:54</a></div></div>
 <div class="ttc" id="aclass_bar_html_aed959fd048ad91636b51f358538786e1"><div class="ttname"><a href="class_bar.html#aed959fd048ad91636b51f358538786e1">Bar::getL</a></div><div class="ttdeci">double getL() const</div><div class="ttdoc">Get the L object.</div><div class="ttdef"><b>Definition:</b> <a href="bar_8h_source.html#l00062">bar.h:62</a></div></div>
+<div class="ttc" id="aclass_sdl_html_ae96fdface86768f26f93296d4ed9511e"><div class="ttname"><a href="class_sdl.html#ae96fdface86768f26f93296d4ed9511e">Sdl::SdlBarRunWindow</a></div><div class="ttdeci">static void SdlBarRunWindow(const Bar &amp;bar, const std::vector&lt; double &gt; &amp;time, const std::vector&lt; double &gt; position, std::vector&lt; std::vector&lt; double &gt;&gt; &amp;sol)</div><div class="ttdoc">Run the SDL window.</div><div class="ttdef"><b>Definition:</b> <a href="sdl_8cpp_source.html#l00022">sdl.cpp:22</a></div></div>
 <div class="ttc" id="acomputation_8cpp_html_adbb6a6e1d20fc59b4678e9d0d6218a7d"><div class="ttname"><a href="computation_8cpp.html#adbb6a6e1d20fc59b4678e9d0d6218a7d">solveBar</a></div><div class="ttdeci">void solveBar(const Bar &amp;bar, const std::string &amp;filename, bool nogui)</div><div class="ttdoc">Solve the bar.</div><div class="ttdef"><b>Definition:</b> <a href="computation_8cpp_source.html#l00019">computation.cpp:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
