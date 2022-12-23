@@ -14,6 +14,10 @@
 
 #include <SDL2/SDL.h>
 
+/**
+ * @brief Class for the SDL library.
+ * 
+ */
 class Sdl
 {
 private:

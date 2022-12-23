@@ -10,6 +10,7 @@
  */
 
 #include "../header/computation.h"
+#include "../header/sdl.h"
 
 #include <thread>
 #include <iostream>
@@ -62,5 +63,14 @@ void solveBar(const Bar &bar, const std::string& filename, bool nogui)
         }
         file.close();
         std::cout << "Solution saved in " << filename << std::endl;
+    }
+
+    if (!nogui)
+    {
+
+    }
+    else
+    {
+        
     }
 }

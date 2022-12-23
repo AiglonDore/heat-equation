@@ -79,6 +79,7 @@ public:
      * @brief Solve the bar model.
      * 
      * @param time Vector of time.
+     * @param position Vector of position.
      * @param sol Vector of solution.
      */
     void solve(const std::vector<double>& time, const std::vector<double> position, std::vector<std::vector<double>>& sol) const;

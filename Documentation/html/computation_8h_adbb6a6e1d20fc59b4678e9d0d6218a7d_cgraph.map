@@ -1,0 +1,5 @@
+<map id="solveBar" name="solveBar">
+<area shape="rect" id="node1" title="Solve the bar." alt="" coords="5,31,84,57"/>
+<area shape="rect" id="node2" href="$class_bar.html#aed959fd048ad91636b51f358538786e1" title="Get the L object." alt="" coords="147,5,227,32"/>
+<area shape="rect" id="node3" href="$class_bar.html#a3a9ee570a559374dc3a4ffed850be14a" title="Get the TMax object." alt="" coords="132,56,241,83"/>
+</map>

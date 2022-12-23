@@ -23,7 +23,7 @@ obj/materials.o : src/materials.cpp header/materials.h
 obj/bar.o : src/bar.cpp header/bar.h header/exn.h header/materials.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-obj/computation.o : src/computation.cpp header/computation.h header/bar.h
+obj/computation.o : src/computation.cpp header/computation.h header/bar.h header/sdl.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 obj/sdl.o : src/sdl.cpp header/sdl.h
