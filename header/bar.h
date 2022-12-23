@@ -81,7 +81,7 @@ public:
      * @param time Vector of time.
      * @param position Vector of position.
      * @param sol Vector of solution.
-     * 
+     * @warning This function is thread-safe, as it will write in different cases of the solution vector.
      * @param index Index of the solution.
      */
     void solve(const std::vector<double>& time, const std::vector<double> position, std::vector<std::vector<double>>& sol, size_t index) const;
