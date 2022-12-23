@@ -74,6 +74,13 @@ public:
      * @return double 
      */
     double getF() const { return f; };
+    /**
+     * @brief Get the value of the source.
+     * 
+     * @param x Position.
+     * @return double 
+     */
+    double operator()(double x) const { return this->F(x); };
 
     /**
      * @brief Solve the bar model.
