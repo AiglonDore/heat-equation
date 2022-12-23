@@ -1,0 +1,8 @@
+<map id="Bar::solve" name="Bar::solve">
+<area shape="rect" id="node1" title="Solve the bar model, using a finite differences method." alt="" coords="5,46,92,73"/>
+<area shape="rect" id="node2" href="$bar_8cpp.html#a91ec11cf21253073b16e46290bda3205" title="Compute the AdAhn matrix (first member of the equation)." alt="" coords="140,71,240,98"/>
+<area shape="rect" id="node6" href="$bar_8cpp.html#ab20a1dfee5d4495546d11e3ee78aab19" title="Compute the C vector (second member of the equation)." alt="" coords="157,21,223,47"/>
+<area shape="rect" id="node3" href="$class_material.html#a5790aca903dbc72bbc2d086fbc4b8e74" title="Get the Density object." alt="" coords="331,71,486,98"/>
+<area shape="rect" id="node4" href="$class_material.html#a72e97739e7856cf4939d0a1b3d969f0c" title="Get the Specific Heat Capacity object." alt="" coords="315,5,502,47"/>
+<area shape="rect" id="node5" href="$class_material.html#a29c6d17f98cacf4ec0477a30994f3712" title="Get the Thermal Conductivity object." alt="" coords="288,122,529,149"/>
+</map>

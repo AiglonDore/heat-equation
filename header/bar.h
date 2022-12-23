@@ -83,7 +83,7 @@ public:
     double operator()(double x) const { return this->F(x); };
 
     /**
-     * @brief Solve the bar model.
+     * @brief Solve the bar model, using a finite differences method.
      * 
      * @param time Vector of time.
      * @param position Vector of position.

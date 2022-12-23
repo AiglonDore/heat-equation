@@ -80,7 +80,7 @@ Collaboration diagram for Bar:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_bar__coll__graph.png" border="0" usemap="#a_bar_coll__map" alt="Collaboration graph"/></div>
 <map name="a_bar_coll__map" id="a_bar_coll__map">
-<area shape="rect" title="Class for the bar model." alt="" coords="5,5,109,171"/>
+<area shape="rect" title="Class for the bar model." alt="" coords="5,5,117,185"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -105,8 +105,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a454da55db7642fb5db70b1419ad6f842"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bar.html#a454da55db7642fb5db70b1419ad6f842">getF</a> () const</td></tr>
 <tr class="memdesc:a454da55db7642fb5db70b1419ad6f842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the F object.  <a href="class_bar.html#a454da55db7642fb5db70b1419ad6f842">More...</a><br /></td></tr>
 <tr class="separator:a454da55db7642fb5db70b1419ad6f842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe26f39a46ba0851de58d477881f90b2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bar.html#abe26f39a46ba0851de58d477881f90b2">operator()</a> (double x) const</td></tr>
+<tr class="memdesc:abe26f39a46ba0851de58d477881f90b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of the source.  <a href="class_bar.html#abe26f39a46ba0851de58d477881f90b2">More...</a><br /></td></tr>
+<tr class="separator:abe26f39a46ba0851de58d477881f90b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafb591cd4dd625f5e498074a0c3e020d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bar.html#aafb591cd4dd625f5e498074a0c3e020d">solve</a> (const std::vector&lt; double &gt; &amp;time, const std::vector&lt; double &gt; position, std::vector&lt; std::vector&lt; double &gt;&gt; &amp;sol) const</td></tr>
-<tr class="memdesc:aafb591cd4dd625f5e498074a0c3e020d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the bar model.  <a href="class_bar.html#aafb591cd4dd625f5e498074a0c3e020d">More...</a><br /></td></tr>
+<tr class="memdesc:aafb591cd4dd625f5e498074a0c3e020d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the bar model, using a finite differences method.  <a href="class_bar.html#aafb591cd4dd625f5e498074a0c3e020d">More...</a><br /></td></tr>
 <tr class="separator:aafb591cd4dd625f5e498074a0c3e020d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -184,7 +187,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bar_8cpp_source.html#l00023">23</a> of file <a class="el" href="bar_8cpp_source.html">bar.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bar_8cpp_source.html#l00073">73</a> of file <a class="el" href="bar_8cpp_source.html">bar.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -338,6 +341,43 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="abe26f39a46ba0851de58d477881f90b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe26f39a46ba0851de58d477881f90b2">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Bar::operator() </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the value of the source. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Position. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="bar_8h_source.html#l00083">83</a> of file <a class="el" href="bar_8h_source.html">bar.h</a>.</p>
+
+</div>
+</div>
 <a id="aafb591cd4dd625f5e498074a0c3e020d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aafb591cd4dd625f5e498074a0c3e020d">&#9670;&nbsp;</a></span>solve()</h2>
 
@@ -370,7 +410,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Solve the bar model. </p>
+<p>Solve the bar model, using a finite differences method. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">time</td><td>Vector of time. </td></tr>
@@ -380,13 +420,26 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bar_8cpp_source.html#l00049">49</a> of file <a class="el" href="bar_8cpp_source.html">bar.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bar_8cpp_source.html#l00099">99</a> of file <a class="el" href="bar_8cpp_source.html">bar.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_bar_aafb591cd4dd625f5e498074a0c3e020d_cgraph.png" border="0" usemap="#aclass_bar_aafb591cd4dd625f5e498074a0c3e020d_cgraph" alt=""/></div>
+<map name="aclass_bar_aafb591cd4dd625f5e498074a0c3e020d_cgraph" id="aclass_bar_aafb591cd4dd625f5e498074a0c3e020d_cgraph">
+<area shape="rect" title="Solve the bar model, using a finite differences method." alt="" coords="5,46,92,73"/>
+<area shape="rect" href="bar_8cpp.html#a91ec11cf21253073b16e46290bda3205" title="Compute the AdAhn matrix (first member of the equation)." alt="" coords="140,71,240,98"/>
+<area shape="rect" href="bar_8cpp.html#ab20a1dfee5d4495546d11e3ee78aab19" title="Compute the C vector (second member of the equation)." alt="" coords="157,21,223,47"/>
+<area shape="rect" href="class_material.html#a5790aca903dbc72bbc2d086fbc4b8e74" title="Get the Density object." alt="" coords="331,71,486,98"/>
+<area shape="rect" href="class_material.html#a72e97739e7856cf4939d0a1b3d969f0c" title="Get the Specific Heat Capacity object." alt="" coords="315,5,502,47"/>
+<area shape="rect" href="class_material.html#a29c6d17f98cacf4ec0477a30994f3712" title="Get the Thermal Conductivity object." alt="" coords="288,122,529,149"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_bar_aafb591cd4dd625f5e498074a0c3e020d_icgraph.png" border="0" usemap="#aclass_bar_aafb591cd4dd625f5e498074a0c3e020d_icgraph" alt=""/></div>
 <map name="aclass_bar_aafb591cd4dd625f5e498074a0c3e020d_icgraph" id="aclass_bar_aafb591cd4dd625f5e498074a0c3e020d_icgraph">
-<area shape="rect" title="Solve the bar model." alt="" coords="235,5,321,32"/>
+<area shape="rect" title="Solve the bar model, using a finite differences method." alt="" coords="235,5,321,32"/>
 <area shape="rect" href="computation_8h.html#adbb6a6e1d20fc59b4678e9d0d6218a7d" title="Solve the bar." alt="" coords="108,5,187,32"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
 </map>

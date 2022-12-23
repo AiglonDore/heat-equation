@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['sdl_67',['Sdl',['../class_sdl.html#adc501e37d45c124f9382ded1a888f0a7',1,'Sdl']]],
-  ['sdlbarrunwindow_68',['SdlBarRunWindow',['../class_sdl.html#ae96fdface86768f26f93296d4ed9511e',1,'Sdl']]],
-  ['solve_69',['solve',['../class_bar.html#aafb591cd4dd625f5e498074a0c3e020d',1,'Bar']]],
-  ['solvebar_70',['solveBar',['../computation_8h.html#adbb6a6e1d20fc59b4678e9d0d6218a7d',1,'solveBar(const Bar &amp;bar, const std::string &amp;filename, bool nogui):&#160;computation.cpp'],['../computation_8cpp.html#adbb6a6e1d20fc59b4678e9d0d6218a7d',1,'solveBar(const Bar &amp;bar, const std::string &amp;filename, bool nogui):&#160;computation.cpp']]]
+  ['parsearguments_71',['parseArguments',['../main_8cpp.html#a1ec8779b895b33a6971f32d7775a117b',1,'main.cpp']]],
+  ['printhelp_72',['printHelp',['../main_8cpp.html#a60d72eb821466c260997c208ec2ce0ab',1,'main.cpp']]]
 ];
