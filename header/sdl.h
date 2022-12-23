@@ -13,6 +13,9 @@
 #define SDL_H
 
 #include <SDL2/SDL.h>
+#include <vector>
+#include "bar.h"
+
 
 /**
  * @brief Class for the SDL library.
@@ -25,6 +28,8 @@ private:
 public:
     Sdl(/* args */);
     ~Sdl();
+
+    static void SdlBarRunWindow(const Bar& bar, const std::vector<double>& time, const std::vector<double> position, std::vector<std::vector<double>>& sol);
 };
 
 #endif // SDL_H

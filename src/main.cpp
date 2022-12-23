@@ -139,10 +139,6 @@ void parseArguments(int argc, char *argv[], double &u0, double &L, double &tMax,
             if (!sscanf(argv[i], "%lf", &W) || W < 0)
                 throw Exn("Invalid W value.");
         }
-        else
-        {
-            throw Exn("Too many arguments.");
-        }
     }
     if (u0 < 0 || tMax < 0 || f < 0 || L < 0 || material == "" || (plate && W < 0))
     {

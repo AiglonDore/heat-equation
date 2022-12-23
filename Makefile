@@ -6,10 +6,12 @@ else
 CFLAGS=-Wall -Wextra -std=c++2a -g
 endif
 
+SDL=`pkg-config --cflags --libs sdl2`
+
 all : heat-equation.out
 
 heat-equation.out : obj/main.o obj/exn.o obj/materials.o obj/bar.o obj/computation.o obj/sdl.o
-	$(CC) $(CFLAGS) -o bin/$@ $^ `pkg-config --cflags --libs sdl2`
+	$(CC) $(CFLAGS) -o bin/$@ $^ $(SDL)
 
 obj/main.o : src/main.cpp header/exn.h header/materials.h
 	$(CC) $(CFLAGS) -c $< -o $@

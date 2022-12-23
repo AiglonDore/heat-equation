@@ -87,7 +87,7 @@ void solveBar(const Bar &bar, const std::string& filename, bool nogui)
 
     if (!nogui)
     {
-
+        Sdl::SdlBarRunWindow(bar, time, position, sol);
     }
     else
     {
