@@ -65,6 +65,22 @@ void solveBar(const Bar &bar, const std::string& filename, bool nogui)
         {
             throw std::runtime_error("Unable to open file " + filename);
         }
+
+        for (size_t i = 0; i < position.size(); i++)
+        {
+            file << position[i] << ",";
+        }
+        file << std::endl;
+        
+        for (size_t i = 0; i < time.size(); i++)
+        {
+            file << time[i] << ",";
+            for (size_t j = 0; j < position.size(); j++)
+            {
+                file << sol[i][j] << ",";
+            }
+            file << std::endl;
+        }
         file.close();
         std::cout << "Solution saved in " << filename << std::endl;
     }
