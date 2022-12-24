@@ -6,7 +6,7 @@ else
 CFLAGS=-Wall -Wextra -std=c++2a -g
 endif
 
-SDL=`pkg-config --cflags --libs sdl2`
+SDL=-D_REENTRANT -I/usr/include/SDL2 -lSDL2
 
 all : heat-equation.out
 
