@@ -90,7 +90,7 @@ void makeAdAhn(const std::vector<double> time, const std::vector<double> positio
             std::swap(rowPermutation[i], rowPermutation[maxRow]);
             std::swap(AdAhn[i], AdAhn[maxRow]);
         }
-        double& pivot = AdAhn[i][i];
+        const double& pivot = AdAhn[i][i];
         for (size_t j = 0; j < position.size(); j++)
         {
             if (i != j)
