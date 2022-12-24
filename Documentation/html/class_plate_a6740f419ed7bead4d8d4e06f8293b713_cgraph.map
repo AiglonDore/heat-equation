@@ -1,0 +1,4 @@
+<map id="Plate::Plate" name="Plate::Plate">
+<area shape="rect" id="node1" title="Construct a new Plate object." alt="" coords="5,5,101,32"/>
+<area shape="rect" id="node2" href="$class_material.html#a4679f4d853f5d5d78288976e534dfb5b" title="Check if a material exists." alt="" coords="149,5,299,32"/>
+</map>

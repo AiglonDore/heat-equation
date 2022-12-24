@@ -1,0 +1,5 @@
+<map id="Material::isMaterial" name="Material::isMaterial">
+<area shape="rect" id="node1" title="Check if a material exists." alt="" coords="149,31,299,57"/>
+<area shape="rect" id="node2" href="$class_bar.html#aee179d14a7dbafe6d65e893344bc54aa" title="Construct a new Bar object." alt="" coords="16,5,91,32"/>
+<area shape="rect" id="node3" href="$class_plate.html#a6740f419ed7bead4d8d4e06f8293b713" title="Construct a new Plate object." alt="" coords="5,56,101,83"/>
+</map>

@@ -76,7 +76,7 @@ public:
      * @return true Material exists.
      * @return false Material does not exist.
      */
-    static bool isMaterial(std::string name) { return materials.find(name) != materials.end(); };
+    static bool isMaterial(const std::string& name) { return materials.find(name) != materials.end(); };
 };
 
 #endif // MATERIALS_H
