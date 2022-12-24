@@ -40,5 +40,6 @@ clean :
 doc :
 	doxygen Doxyfile
 
-install : heat-equation.out
+install :
+	make clean all RELEASE=TRUE
 	sudo cp bin/heat-equation.out /usr/local/bin/heat-equation
