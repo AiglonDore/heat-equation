@@ -76,7 +76,7 @@ void solveBar(const Bar &bar, const std::string& filename, bool nogui)
     if (!nogui)
     {
         std::cout << "Displaying solution in GUI..." << std::endl;
-        std::cout << "Initiating SDL..." << std::endl;
+        std::cout << "Initializing SDL..." << std::endl;
         Sdl::SdlBarRunWindow(bar, time, position, sol);
     }
     else
@@ -98,4 +98,9 @@ void solveBar(const Bar &bar, const std::string& filename, bool nogui)
             std::cout << std::endl;
         }
     }
+}
+
+void solvePlate(const Plate &plate, const std::string& filename, bool nogui)
+{
+    
 }

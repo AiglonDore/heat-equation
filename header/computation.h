@@ -14,6 +14,7 @@
 
 #include <vector>
 #include "bar.h"
+#include "plate.h"
 
 /**
  * @brief Solve the bar.
@@ -24,6 +25,6 @@
  */
 void solveBar(const Bar &bar, const std::string& filename, bool nogui);
 
-//void solvePlate(const Plate &plate, const std::string& filename, bool nogui);
+void solvePlate(const Plate &plate, const std::string& filename, bool nogui);
 
 #endif // COMPUTATION_H
