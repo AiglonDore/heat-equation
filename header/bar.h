@@ -89,7 +89,7 @@ public:
      * @param position Vector of position.
      * @param sol Vector of solution.
      */
-    void solve(const std::vector<double>& time, const std::vector<double> position, std::vector<std::vector<double>>& sol) const;
+    void solve(const std::vector<double>& time, const std::vector<double>& position, std::vector<std::vector<double>>& sol) const;
 };
 
 #endif // BAR_H
