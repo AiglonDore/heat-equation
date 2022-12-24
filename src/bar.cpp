@@ -9,16 +9,13 @@
  * 
  */
 
-/**
- * @brief Number of points for the solution.
-*/
-#define N 1001
 
 #include "../header/bar.h"
 #include "../header/exn.h"
 #include "../header/materials.h"
 
 #include <thread>
+#include <map>
 
 /**
  * @brief Compute the C vector (second member of the equation).
@@ -67,7 +64,71 @@ void makeAdAhn(const std::vector<double> time, const std::vector<double> positio
         }
     }
     // Inverting matrix
-    
+    std::map<size_t, size_t> rowPermutation;
+    for (size_t i = 0; i < position.size(); i++)
+    {
+        rowPermutation[i] = i;
+    }
+    for (size_t i = 0; i < position.size(); i++)
+    {
+        double max = std::abs(AdAhn[i][i]);
+        size_t maxRow = i;
+        for (size_t j = i + 1; j < position.size(); j++)
+        {
+            if (std::abs(AdAhn[j][i]) > max)
+            {
+                max = AdAhn[j][i];
+                maxRow = j;
+            }
+        }
+        if (std::abs(max) <= 1e-15)
+        {
+            throw Exn("Matrix is singular.");
+        }
+        if (maxRow != i)
+        {
+            std::swap(rowPermutation[i], rowPermutation[maxRow]);
+            std::swap(AdAhn[i], AdAhn[maxRow]);
+        }
+        double& pivot = AdAhn[i][i];
+        for (size_t j = 0; j < position.size(); j++)
+        {
+            if (i != j)
+            {
+                AdAhn[i][j] /= pivot;
+            }
+        }
+        for (size_t j = 0; j < position.size(); j++)
+        {
+            if (i != j)
+            {
+                for (size_t k = 0; k < position.size(); k++)
+                {
+                    if (i != k)
+                    {
+                        AdAhn[j][k] -= AdAhn[j][i] * AdAhn[i][k];
+                    }
+                }
+            }
+        }
+        for (size_t j = 0; j < position.size(); j++)
+        {
+            if (i != j)
+            {
+                AdAhn[j][i] /= -pivot;
+            }
+        }
+        AdAhn[i][i] = 1.0;
+    }
+    // Permuting rows
+    for (size_t i = 0; i < position.size(); i++)
+    {
+        if (rowPermutation[i] != i)
+        {
+            std::swap(AdAhn[i], AdAhn[rowPermutation[i]]);
+            rowPermutation[rowPermutation[i]] = rowPermutation[i];
+        }
+    }
 }
 
 /**
