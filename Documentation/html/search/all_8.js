@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['n_27',['N',['../bar_8cpp.html#a0240ac851181b84ac374872dc5434ee4',1,'bar.cpp']]]
+  ['operator_28_29_27',['operator()',['../class_bar.html#abe26f39a46ba0851de58d477881f90b2',1,'Bar::operator()()'],['../class_plate.html#ae0747b41c47c7951cdbf7a128ed9eb8a',1,'Plate::operator()()']]]
 ];

@@ -1,7 +1,9 @@
 <map id="header/exn.h" name="header/exn.h">
-<area shape="rect" id="node1" title="Provides the Exn class to deal with exceptions." alt="" coords="179,5,286,32"/>
+<area shape="rect" id="node1" title="Provides the Exn class to deal with exceptions." alt="" coords="358,5,465,32"/>
 <area shape="rect" id="node2" href="$bar_8cpp.html" title="Implements bar.h." alt="" coords="5,80,97,107"/>
-<area shape="rect" id="node3" href="$exn_8cpp.html" title="Implements exn.h." alt="" coords="122,80,218,107"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="Main file." alt="" coords="243,80,348,107"/>
-<area shape="rect" id="node5" href="$sdl_8cpp.html" title="Implements sdl.h." alt="" coords="373,80,463,107"/>
+<area shape="rect" id="node3" href="$computation_8cpp.html" title="Implements computation.h." alt="" coords="122,80,277,107"/>
+<area shape="rect" id="node4" href="$exn_8cpp.html" title="Implements exn.h." alt="" coords="301,80,397,107"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="Main file." alt="" coords="421,80,527,107"/>
+<area shape="rect" id="node6" href="$plate_8cpp.html" title="Implements plate.h." alt="" coords="551,80,656,107"/>
+<area shape="rect" id="node7" href="$sdl_8cpp.html" title="Implements sdl.h." alt="" coords="681,80,771,107"/>
 </map>

@@ -17,9 +17,10 @@
 /**
  * @brief Compute the C vector (second member of the equation).
  * 
- * @param position Vector of the position.
+ * @param positionX Vector of the position along X.
+ * @param positionY Vector of the position along Y.
  * @param mat Material.
- * @param bar Bar.
+ * @param plate Plate.
  * @param C Vector to fill.
  * @throws Exception if positionX and positionY have different size.
  */

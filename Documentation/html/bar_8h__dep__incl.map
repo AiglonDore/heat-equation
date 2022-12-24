@@ -1,9 +1,10 @@
 <map id="header/bar.h" name="header/bar.h">
-<area shape="rect" id="node1" title="Provides." alt="" coords="205,5,308,32"/>
-<area shape="rect" id="node2" href="$computation_8h.html" title="Provides an interfce for the computation of the solution." alt="" coords="95,80,261,107"/>
+<area shape="rect" id="node1" title="Provides." alt="" coords="227,5,329,32"/>
+<area shape="rect" id="node2" href="$computation_8h.html" title="Provides an interfce for the computation of the solution." alt="" coords="117,80,282,107"/>
 <area shape="rect" id="node4" href="$main_8cpp.html" title="Main file." alt="" coords="5,155,111,181"/>
-<area shape="rect" id="node5" href="$sdl_8h.html" title="Provides an interface to use the SDL library." alt="" coords="285,80,388,107"/>
-<area shape="rect" id="node7" href="$bar_8cpp.html" title="Implements bar.h." alt="" coords="412,80,504,107"/>
+<area shape="rect" id="node5" href="$sdl_8h.html" title="Provides an interface to use the SDL library." alt="" coords="307,80,409,107"/>
+<area shape="rect" id="node8" href="$bar_8cpp.html" title="Implements bar.h." alt="" coords="433,80,525,107"/>
 <area shape="rect" id="node3" href="$computation_8cpp.html" title="Implements computation.h." alt="" coords="134,155,289,181"/>
-<area shape="rect" id="node6" href="$sdl_8cpp.html" title="Implements sdl.h." alt="" coords="313,155,403,181"/>
+<area shape="rect" id="node6" href="$plate_8cpp.html" title="Implements plate.h." alt="" coords="313,155,419,181"/>
+<area shape="rect" id="node7" href="$sdl_8cpp.html" title="Implements sdl.h." alt="" coords="443,155,534,181"/>
 </map>
