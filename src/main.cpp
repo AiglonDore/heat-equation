@@ -27,7 +27,7 @@ using namespace std;
  */
 void printHelp(const char *arg)
 {
-    cout << "Usage: " << arg << "[OPTIONS] <material> <u0> <tMax> <f> <L> [<W>]" << endl;
+    cout << "Usage: " << arg << "[OPTIONS] <material> <u0> <tMax> <f> <L>" << endl;
     cout << "OPTIONS:" << endl;
     cout << "  -h, --help\t\tDisplay this help message." << endl;
     cout << "  -v, --version\t\tDisplay version information." << endl;
@@ -53,14 +53,14 @@ void printHelp(const char *arg)
  * @param nogui If the GUI is used.
  * @throws Exn If not enough arguments for material creation.
  */
-void parseArguments(int argc, char *argv[], double &u0, double &L, double &tMax, double &f, string &material, bool &plate, double &W, string &filename, bool &nogui)
+void parseArguments(int argc, char *argv[], double &u0, double &L, double &tMax, double &f, string &material, bool &plate, string &filename, bool &nogui)
 {
     if (argc == 1)
     {
         printHelp(argv[0]);
         exit(0);
     }
-    if (argc < 5)
+    if (argc < 6)
     {
         throw Exn("Not enough arguments.");
     }
@@ -134,15 +134,6 @@ void parseArguments(int argc, char *argv[], double &u0, double &L, double &tMax,
             if (!sscanf(argv[i], "%lf", &L) || L < 0)
                 throw Exn("Invalid L value.");
         }
-        else if (plate && W < 0)
-        {
-            if (!sscanf(argv[i], "%lf", &W) || W < 0)
-                throw Exn("Invalid W value.");
-        }
-    }
-    if (u0 < 0 || tMax < 0 || f < 0 || L < 0 || material == "" || (plate && W < 0))
-    {
-        throw Exn("Not enough arguments.");
     }
 }
 
@@ -156,13 +147,13 @@ void parseArguments(int argc, char *argv[], double &u0, double &L, double &tMax,
 int main(int argc, char *argv[])
 {
     cout << "\t\t----- Heat Equation Solver -----" << endl;
-    double u0 = -1, L = -1, tMax = -1, f = -1, W = -1;
+    double u0 = -1, L = -1, tMax = -1, f = -1;
     string material = "", filename = "";
     bool plate = false;
     bool nogui = false;
     try
     {
-        parseArguments(argc, argv, u0, L, tMax, f, material, plate, W, filename, nogui);
+        parseArguments(argc, argv, u0, L, tMax, f, material, plate, filename, nogui);
         if (!plate)
         {
             Bar bar(u0, L, tMax, f, material);
@@ -170,8 +161,8 @@ int main(int argc, char *argv[])
         }
         else
         {
-            // Plate plate(u0, L, tMax, f, material, W);
-            // solvePlate(plate, filename, nogui);
+            Plate plate(u0, L, tMax, f, material);
+            solvePlate(plate, filename, nogui);
         }
     }
     catch (const std::exception &e)
