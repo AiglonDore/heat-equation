@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['exn_57',['Exn',['../class_exn.html#a0341d804f8d076df6906a769dab2a520',1,'Exn::Exn()'],['../class_exn.html#a72b7c08ac82d31b9270c54a17491d03e',1,'Exn::Exn(const char *msg)']]]
+  ['computetermsol_66',['computeTermSol',['../bar_8cpp.html#ad52c5ee33e96633783486e431db3ed4a',1,'bar.cpp']]]
 ];

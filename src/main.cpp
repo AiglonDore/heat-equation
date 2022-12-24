@@ -48,7 +48,6 @@ void printHelp(const char *arg)
  * @param f Temperature of the source.
  * @param material Material
  * @param plate If the plate is used.
- * @param W Width in case of plate.
  * @param filename File to write output.
  * @param nogui If the GUI is used.
  * @throws Exn If not enough arguments for material creation.

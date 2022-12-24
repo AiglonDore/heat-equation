@@ -31,7 +31,7 @@ private:
     std::string material;
 public:
         /**
-     * @brief Construct a new Bar object.
+     * @brief Construct a new Plate object.
      * 
      * @param u0 Initial temperature.
      * @param L Length and width of the plate.
@@ -42,7 +42,7 @@ public:
      */
     explicit Plate(double u0, double L, double tMax, double f, const std::string& material);
     /**
-     * @brief Destroy the Bar object.
+     * @brief Destroy the Plate object.
      * 
      */
     ~Plate();
@@ -77,13 +77,14 @@ public:
     /**
      * @brief Get the value of the source.
      * 
-     * @param x Position.
+     * @param x Position along x.
+     * @param y Position along y.
      * @return double 
      */
     double operator()(double x, double y) const { return this->F(x,y); };
 
     /**
-     * @brief Solve the bar model, using a finite differences method.
+     * @brief Solve the plate model, using a finite differences method.
      * 
      * @param time Vector of time.
      * @param positionX Vector of position along x.

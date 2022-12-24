@@ -106,7 +106,7 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    timeThread.join();</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    positionThread.join();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    bar.<a class="code" href="class_bar.html#aafb591cd4dd625f5e498074a0c3e020d">solve</a>(time, position, sol);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    bar.<a class="code" href="class_bar.html#a125b6a48d09e40d05a885b98a3a4c670">solve</a>(time, position, sol);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Solution computed.&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (filename != <span class="stringliteral">&quot;&quot;</span>)</div>
@@ -138,18 +138,42 @@ $(function() {
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (!nogui)</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="class_sdl.html#ae96fdface86768f26f93296d4ed9511e">Sdl::SdlBarRunWindow</a>(bar, time, position, sol);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Displaying solution in GUI...&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Initializing SDL...&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91">Sdl::SdlBarRunWindow</a>(bar, time, position, sol);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Displaying solution in console...&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; position.size(); i++)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            std::cout &lt;&lt; position[i] &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        std::cout &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; time.size(); i++)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            std::cout &lt;&lt; time[i] &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; position.size(); j++)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                std::cout &lt;&lt; sol[i][j] &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            std::cout &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="computation_8h.html#a5d20313aedb111f086b52f9a94f29175">  103</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="computation_8cpp.html#a5d20313aedb111f086b52f9a94f29175">solvePlate</a>(<span class="keyword">const</span> <a class="code" href="class_plate.html">Plate</a> &amp;plate, <span class="keyword">const</span> std::string&amp; filename, <span class="keywordtype">bool</span> nogui)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
 <div class="ttc" id="aclass_bar_html"><div class="ttname"><a href="class_bar.html">Bar</a></div><div class="ttdoc">Class for the bar model.</div><div class="ttdef"><b>Definition:</b> <a href="bar_8h_source.html#l00023">bar.h:24</a></div></div>
+<div class="ttc" id="aclass_bar_html_a125b6a48d09e40d05a885b98a3a4c670"><div class="ttname"><a href="class_bar.html#a125b6a48d09e40d05a885b98a3a4c670">Bar::solve</a></div><div class="ttdeci">void solve(const std::vector&lt; double &gt; &amp;time, const std::vector&lt; double &gt; &amp;position, std::vector&lt; std::vector&lt; double &gt;&gt; &amp;sol) const</div><div class="ttdoc">Solve the bar model, using a finite differences method.</div><div class="ttdef"><b>Definition:</b> <a href="bar_8cpp_source.html#l00120">bar.cpp:120</a></div></div>
 <div class="ttc" id="aclass_bar_html_a3a9ee570a559374dc3a4ffed850be14a"><div class="ttname"><a href="class_bar.html#a3a9ee570a559374dc3a4ffed850be14a">Bar::getTMax</a></div><div class="ttdeci">double getTMax() const</div><div class="ttdoc">Get the TMax object.</div><div class="ttdef"><b>Definition:</b> <a href="bar_8h_source.html#l00069">bar.h:69</a></div></div>
-<div class="ttc" id="aclass_bar_html_aafb591cd4dd625f5e498074a0c3e020d"><div class="ttname"><a href="class_bar.html#aafb591cd4dd625f5e498074a0c3e020d">Bar::solve</a></div><div class="ttdeci">void solve(const std::vector&lt; double &gt; &amp;time, const std::vector&lt; double &gt; position, std::vector&lt; std::vector&lt; double &gt;&gt; &amp;sol) const</div><div class="ttdoc">Solve the bar model, using a finite differences method.</div><div class="ttdef"><b>Definition:</b> <a href="bar_8cpp_source.html#l00113">bar.cpp:113</a></div></div>
 <div class="ttc" id="aclass_bar_html_aed959fd048ad91636b51f358538786e1"><div class="ttname"><a href="class_bar.html#aed959fd048ad91636b51f358538786e1">Bar::getL</a></div><div class="ttdeci">double getL() const</div><div class="ttdoc">Get the L object.</div><div class="ttdef"><b>Definition:</b> <a href="bar_8h_source.html#l00062">bar.h:62</a></div></div>
-<div class="ttc" id="aclass_sdl_html_ae96fdface86768f26f93296d4ed9511e"><div class="ttname"><a href="class_sdl.html#ae96fdface86768f26f93296d4ed9511e">Sdl::SdlBarRunWindow</a></div><div class="ttdeci">static void SdlBarRunWindow(const Bar &amp;bar, const std::vector&lt; double &gt; &amp;time, const std::vector&lt; double &gt; position, std::vector&lt; std::vector&lt; double &gt;&gt; &amp;sol)</div><div class="ttdoc">Run the SDL window.</div><div class="ttdef"><b>Definition:</b> <a href="sdl_8cpp_source.html#l00023">sdl.cpp:23</a></div></div>
+<div class="ttc" id="aclass_plate_html"><div class="ttname"><a href="class_plate.html">Plate</a></div><div class="ttdoc">Class representing a plate.</div><div class="ttdef"><b>Definition:</b> <a href="plate_8h_source.html#l00023">plate.h:24</a></div></div>
+<div class="ttc" id="aclass_sdl_html_ab38899d27d92fbb2896dc0bb0f6d4c91"><div class="ttname"><a href="class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91">Sdl::SdlBarRunWindow</a></div><div class="ttdeci">static void SdlBarRunWindow(const Bar &amp;bar, const std::vector&lt; double &gt; &amp;time, const std::vector&lt; double &gt; &amp;position, std::vector&lt; std::vector&lt; double &gt;&gt; &amp;sol)</div><div class="ttdoc">Run the SDL window.</div><div class="ttdef"><b>Definition:</b> <a href="sdl_8cpp_source.html#l00023">sdl.cpp:23</a></div></div>
+<div class="ttc" id="acomputation_8cpp_html_a5d20313aedb111f086b52f9a94f29175"><div class="ttname"><a href="computation_8cpp.html#a5d20313aedb111f086b52f9a94f29175">solvePlate</a></div><div class="ttdeci">void solvePlate(const Plate &amp;plate, const std::string &amp;filename, bool nogui)</div><div class="ttdoc">Solve the plate.</div><div class="ttdef"><b>Definition:</b> <a href="computation_8cpp_source.html#l00103">computation.cpp:103</a></div></div>
 <div class="ttc" id="acomputation_8cpp_html_adbb6a6e1d20fc59b4678e9d0d6218a7d"><div class="ttname"><a href="computation_8cpp.html#adbb6a6e1d20fc59b4678e9d0d6218a7d">solveBar</a></div><div class="ttdeci">void solveBar(const Bar &amp;bar, const std::string &amp;filename, bool nogui)</div><div class="ttdoc">Solve the bar.</div><div class="ttdef"><b>Definition:</b> <a href="computation_8cpp_source.html#l00019">computation.cpp:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -1,0 +1,7 @@
+<map id="header/plate.h" name="header/plate.h">
+<area shape="rect" id="node1" title="Provides the Plate class." alt="" coords="182,5,298,32"/>
+<area shape="rect" id="node2" href="$computation_8h.html" title="Provides an interfce for the computation of the solution." alt="" coords="77,80,243,107"/>
+<area shape="rect" id="node5" href="$plate_8cpp.html" title="Implements plate.h." alt="" coords="267,80,373,107"/>
+<area shape="rect" id="node3" href="$computation_8cpp.html" title="Implements computation.h." alt="" coords="5,155,160,181"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="Main file." alt="" coords="185,155,290,181"/>
+</map>

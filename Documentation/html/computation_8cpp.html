@@ -86,17 +86,18 @@ Include dependency graph for computation.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="computation_8cpp__incl.png" border="0" usemap="#asrc_2computation_8cpp" alt=""/></div>
 <map name="asrc_2computation_8cpp" id="asrc_2computation_8cpp">
-<area shape="rect" title="Implements computation.h." alt="" coords="301,5,455,32"/>
-<area shape="rect" href="computation_8h.html" title="Provides an interfce for the computation of the solution." alt="" coords="5,80,183,107"/>
-<area shape="rect" href="sdl_8h.html" title="Provides an interface to use the SDL library." alt="" coords="207,80,322,107"/>
-<area shape="rect" title=" " alt="" coords="346,80,410,107"/>
-<area shape="rect" title=" " alt="" coords="434,80,514,107"/>
-<area shape="rect" title=" " alt="" coords="539,80,612,107"/>
-<area shape="rect" title=" " alt="" coords="80,229,143,256"/>
-<area shape="rect" href="bar_8h.html" title="Provides." alt="" coords="183,155,237,181"/>
-<area shape="rect" title=" " alt="" coords="167,229,253,256"/>
-<area shape="rect" title=" " alt="" coords="278,229,337,256"/>
-<area shape="rect" title=" " alt="" coords="262,155,358,181"/>
+<area shape="rect" title="Implements computation.h." alt="" coords="349,5,504,32"/>
+<area shape="rect" href="computation_8h.html" title="Provides an interfce for the computation of the solution." alt="" coords="193,80,370,107"/>
+<area shape="rect" href="sdl_8h.html" title="Provides an interface to use the SDL library." alt="" coords="53,80,168,107"/>
+<area shape="rect" title=" " alt="" coords="395,80,459,107"/>
+<area shape="rect" title=" " alt="" coords="483,80,563,107"/>
+<area shape="rect" title=" " alt="" coords="587,80,661,107"/>
+<area shape="rect" title=" " alt="" coords="147,229,210,256"/>
+<area shape="rect" href="bar_8h.html" title="Provides." alt="" coords="227,155,282,181"/>
+<area shape="rect" href="plate_8h.html" title="Provides the Plate class." alt="" coords="307,155,373,181"/>
+<area shape="rect" title=" " alt="" coords="318,229,405,256"/>
+<area shape="rect" title=" " alt="" coords="235,229,293,256"/>
+<area shape="rect" title=" " alt="" coords="5,155,101,181"/>
 </map>
 </div>
 </div>
@@ -107,6 +108,9 @@ Functions</h2></td></tr>
 <tr class="memitem:adbb6a6e1d20fc59b4678e9d0d6218a7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="computation_8cpp.html#adbb6a6e1d20fc59b4678e9d0d6218a7d">solveBar</a> (const <a class="el" href="class_bar.html">Bar</a> &amp;bar, const std::string &amp;filename, bool nogui)</td></tr>
 <tr class="memdesc:adbb6a6e1d20fc59b4678e9d0d6218a7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the bar.  <a href="computation_8cpp.html#adbb6a6e1d20fc59b4678e9d0d6218a7d">More...</a><br /></td></tr>
 <tr class="separator:adbb6a6e1d20fc59b4678e9d0d6218a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d20313aedb111f086b52f9a94f29175"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="computation_8cpp.html#a5d20313aedb111f086b52f9a94f29175">solvePlate</a> (const <a class="el" href="class_plate.html">Plate</a> &amp;plate, const std::string &amp;filename, bool nogui)</td></tr>
+<tr class="memdesc:a5d20313aedb111f086b52f9a94f29175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the plate.  <a href="computation_8cpp.html#a5d20313aedb111f086b52f9a94f29175">More...</a><br /></td></tr>
+<tr class="separator:a5d20313aedb111f086b52f9a94f29175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements <a class="el" href="computation_8h.html">computation.h</a>. </p>
@@ -168,13 +172,14 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Solve the bar." alt="" coords="5,81,84,108"/>
 <area shape="rect" href="class_bar.html#aed959fd048ad91636b51f358538786e1" title="Get the L object." alt="" coords="177,5,257,32"/>
 <area shape="rect" href="class_bar.html#a3a9ee570a559374dc3a4ffed850be14a" title="Get the TMax object." alt="" coords="162,56,271,83"/>
-<area shape="rect" href="class_sdl.html#ae96fdface86768f26f93296d4ed9511e" title="Run the SDL window." alt="" coords="132,107,301,133"/>
-<area shape="rect" href="class_bar.html#aafb591cd4dd625f5e498074a0c3e020d" title="Solve the bar model, using a finite differences method." alt="" coords="173,157,260,184"/>
-<area shape="rect" href="bar_8cpp.html#aafad520d27dfd7f8fb4bcedd7adc6787" title="Compute the AdAhn matrix (first member of the equation)." alt="" coords="349,183,449,209"/>
-<area shape="rect" href="bar_8cpp.html#ab20a1dfee5d4495546d11e3ee78aab19" title="Compute the C vector (second member of the equation)." alt="" coords="366,132,433,159"/>
-<area shape="rect" href="class_material.html#a5790aca903dbc72bbc2d086fbc4b8e74" title="Get the Density object." alt="" coords="541,183,695,209"/>
-<area shape="rect" href="class_material.html#a72e97739e7856cf4939d0a1b3d969f0c" title="Get the Specific Heat Capacity object." alt="" coords="525,117,711,158"/>
-<area shape="rect" href="class_material.html#a29c6d17f98cacf4ec0477a30994f3712" title="Get the Thermal Conductivity object." alt="" coords="497,233,739,260"/>
+<area shape="rect" href="class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91" title="Run the SDL window." alt="" coords="132,107,301,133"/>
+<area shape="rect" href="class_bar.html#a125b6a48d09e40d05a885b98a3a4c670" title="Solve the bar model, using a finite differences method." alt="" coords="173,157,260,184"/>
+<area shape="rect" href="bar_8cpp.html#ad52c5ee33e96633783486e431db3ed4a" title="Compute the solution of the equation." alt="" coords="349,107,480,133"/>
+<area shape="rect" href="bar_8cpp.html#aafad520d27dfd7f8fb4bcedd7adc6787" title="Compute the AdAhn matrix (first member of the equation)." alt="" coords="365,208,465,235"/>
+<area shape="rect" href="bar_8cpp.html#ab20a1dfee5d4495546d11e3ee78aab19" title="Compute the C vector (second member of the equation)." alt="" coords="381,157,448,184"/>
+<area shape="rect" href="class_material.html#a5790aca903dbc72bbc2d086fbc4b8e74" title="Get the Density object." alt="" coords="571,208,726,235"/>
+<area shape="rect" href="class_material.html#a72e97739e7856cf4939d0a1b3d969f0c" title="Get the Specific Heat Capacity object." alt="" coords="555,142,742,183"/>
+<area shape="rect" href="class_material.html#a29c6d17f98cacf4ec0477a30994f3712" title="Get the Thermal Conductivity object." alt="" coords="528,259,769,285"/>
 </map>
 </div>
 <div class="dynheader">
@@ -183,6 +188,61 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="computation_8cpp_adbb6a6e1d20fc59b4678e9d0d6218a7d_icgraph.png" border="0" usemap="#acomputation_8cpp_adbb6a6e1d20fc59b4678e9d0d6218a7d_icgraph" alt=""/></div>
 <map name="acomputation_8cpp_adbb6a6e1d20fc59b4678e9d0d6218a7d_icgraph" id="acomputation_8cpp_adbb6a6e1d20fc59b4678e9d0d6218a7d_icgraph">
 <area shape="rect" title="Solve the bar." alt="" coords="108,5,187,32"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5d20313aedb111f086b52f9a94f29175"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d20313aedb111f086b52f9a94f29175">&#9670;&nbsp;</a></span>solvePlate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void solvePlate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_plate.html">Plate</a> &amp;&#160;</td>
+          <td class="paramname"><em>plate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>nogui</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solve the plate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plate</td><td><a class="el" href="class_plate.html" title="Class representing a plate.">Plate</a> to solve. </td></tr>
+    <tr><td class="paramname">filename</td><td>File to write output. </td></tr>
+    <tr><td class="paramname">nogui</td><td>If the GUI is used. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="computation_8cpp_source.html#l00103">103</a> of file <a class="el" href="computation_8cpp_source.html">computation.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="computation_8cpp_a5d20313aedb111f086b52f9a94f29175_icgraph.png" border="0" usemap="#acomputation_8cpp_a5d20313aedb111f086b52f9a94f29175_icgraph" alt=""/></div>
+<map name="acomputation_8cpp_a5d20313aedb111f086b52f9a94f29175_icgraph" id="acomputation_8cpp_a5d20313aedb111f086b52f9a94f29175_icgraph">
+<area shape="rect" title="Solve the plate." alt="" coords="108,5,199,32"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
 </map>
 </div>

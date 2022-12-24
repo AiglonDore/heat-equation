@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sdl_2ecpp_54',['sdl.cpp',['../sdl_8cpp.html',1,'']]],
-  ['sdl_2eh_55',['sdl.h',['../sdl_8h.html',1,'']]]
+  ['plate_2ecpp_61',['plate.cpp',['../plate_8cpp.html',1,'']]],
+  ['plate_2eh_62',['plate.h',['../plate_8h.html',1,'']]]
 ];

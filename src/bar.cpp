@@ -70,6 +70,13 @@ void makeAdAhn(const std::vector<double> time, const std::vector<double> positio
     
 }
 
+/**
+ * @brief Compute the solution of the equation.
+ * 
+ * @param mat Matrix of the equation.
+ * @param vec Vector of the equation.
+ * @param sol Vector to fill.
+ */
 void computeTermSol(const std::vector<std::vector<double>>& mat, const std::vector<double>& vec, std::vector<double>& sol)
 {
     sol.clear();

@@ -25,6 +25,13 @@
  */
 void solveBar(const Bar &bar, const std::string& filename, bool nogui);
 
+/**
+ * @brief Solve the plate.
+ * 
+ * @param plate Plate to solve.
+ * @param filename File to write output.
+ * @param nogui  If the GUI is used.
+ */
 void solvePlate(const Plate &plate, const std::string& filename, bool nogui);
 
 #endif // COMPUTATION_H

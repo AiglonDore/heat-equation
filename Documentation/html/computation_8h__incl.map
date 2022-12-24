@@ -1,7 +1,8 @@
 <map id="header/computation.h" name="header/computation.h">
-<area shape="rect" id="node1" title="Provides an interfce for the computation of the solution." alt="" coords="5,5,171,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="9,155,71,181"/>
-<area shape="rect" id="node3" href="$bar_8h.html" title="Provides." alt="" coords="102,80,157,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="95,155,182,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="207,155,265,181"/>
+<area shape="rect" id="node1" title="Provides an interfce for the computation of the solution." alt="" coords="25,5,190,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,155,68,181"/>
+<area shape="rect" id="node3" href="$bar_8h.html" title="Provides." alt="" coords="165,80,220,107"/>
+<area shape="rect" id="node6" href="$plate_8h.html" title="Provides the Plate class." alt="" coords="74,80,141,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="176,155,263,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="93,155,151,181"/>
 </map>

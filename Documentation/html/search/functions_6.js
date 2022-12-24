@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['parsearguments_71',['parseArguments',['../main_8cpp.html#a1ec8779b895b33a6971f32d7775a117b',1,'main.cpp']]],
-  ['printhelp_72',['printHelp',['../main_8cpp.html#a60d72eb821466c260997c208ec2ce0ab',1,'main.cpp']]]
+  ['operator_28_29_80',['operator()',['../class_bar.html#abe26f39a46ba0851de58d477881f90b2',1,'Bar::operator()()'],['../class_plate.html#ae0747b41c47c7951cdbf7a128ed9eb8a',1,'Plate::operator()()']]]
 ];
