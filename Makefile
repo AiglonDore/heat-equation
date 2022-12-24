@@ -31,7 +31,7 @@ obj/computation.o : src/computation.cpp header/computation.h header/bar.h header
 obj/sdl.o : src/sdl.cpp header/sdl.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-obj/plate.o : src/plate.cpp header/plate.h
+obj/plate.o : src/plate.cpp header/plate.h header/exn.h header/materials.h header/sdl.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
