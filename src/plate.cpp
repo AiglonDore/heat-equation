@@ -10,6 +10,32 @@
  */
 
 #include "../header/plate.h"
+#include "../header/materials.h"
+#include "../header/sdl.h"
+#include "../header/exn.h"
+
+/**
+ * @brief Compute the C vector (second member of the equation).
+ * 
+ * @param position Vector of the position.
+ * @param mat Material.
+ * @param bar Bar.
+ * @param C Vector to fill.
+ * @throws Exception if positionX and positionY have different size.
+ */
+void makeC(const std::vector<double>& positionX, const std::vector<double> positionY, const Material& mat, const Plate& plate, std::vector<double>& C)
+{
+    if (positionX.size() != positionY.size())
+    {
+        throw Exn("Position along x and along y must have the same size.");
+    }
+    C.clear();
+    C.resize(positionX.size());
+    for (size_t i = 0; i < positionX.size(); i++)
+    {
+        C[i] = 1 / (mat.getDensity() * mat.getSpecificHeatCapacity() * plate(positionX[i], positionY[i]));
+    }
+}
 
 Plate::Plate(double u0, double L, double tMax, double f, const std::string& material) : u0(u0), L(L), tMax(tMax), f(f), material(material)
 {

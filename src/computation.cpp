@@ -11,7 +11,9 @@
 
 #include "../header/computation.h"
 #include "../header/sdl.h"
+#include "../header/exn.h"
 
+#include <map>
 #include <thread>
 #include <iostream>
 #include <fstream>
@@ -102,5 +104,37 @@ void solveBar(const Bar &bar, const std::string& filename, bool nogui)
 
 void solvePlate(const Plate &plate, const std::string& filename, bool nogui)
 {
+    double tMax = plate.getTMax();
+    double L = plate.getL();
     
+    std::vector<double> time;
+    std::vector<double> positionX;
+    std::vector<double> positionY;
+    std::vector<std::vector<double>> sol;
+
+    double dt = tMax / 1000;
+    std::thread timeThread([&time, tMax, dt]()
+    {
+        for (double t = 0; t <= tMax; t += dt)
+        {
+            time.push_back(t);
+        }
+    });
+    std::thread positionXThread([&positionX, L]()
+    {
+        for (double x = 0; x <= L; x += L / 1000)
+        {
+            positionX.push_back(x);
+        }
+    });
+    std::thread positionYThread([&positionY, L]()
+    {
+        for (double y = 0; y <= L; y += L / 1000)
+        {
+            positionY.push_back(y);
+        }
+    });
+    timeThread.join();
+    positionXThread.join();
+    positionYThread.join();
 }
