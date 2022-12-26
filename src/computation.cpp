@@ -55,10 +55,10 @@ void solveBar(const Bar &bar, const std::string& filename, bool nogui)
         {
             throw std::runtime_error("Unable to open file " + filename);
         }
-
+        file << "Time/position,";
         for (size_t i = 0; i < position.size(); i++)
         {
-            file << position[i] << ",";
+            file  << position[i] << ",";
         }
         file << std::endl;
         

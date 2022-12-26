@@ -105,7 +105,7 @@ void parseArguments(int argc, char *argv[], double &u0, double &L, double &tMax,
             i++;
             cout << "Output will also be written in \"" << filename << "\"." << endl;
         }
-        else if (strcmp(argv[i], "-n") == 0 || strcmp(argv[i], "--no-gui") == 0)
+        else if (strcmp(argv[i], "-n") == 0 || strcmp(argv[i], "-no-gui") == 0 || !strcmp(argv[i], "-ng") || !strcmp(argv[i], "--no-gui"))
         {
             nogui = true;
         }

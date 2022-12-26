@@ -16,6 +16,7 @@
 
 #include <thread>
 #include <map>
+#include <iostream>
 
 /**
  * @brief Compute the C vector (second member of the equation).
@@ -31,7 +32,7 @@ void makeC(const std::vector<double>& position, const Material& mat, const Bar& 
     C.resize(position.size());
     for (size_t i = 0; i < position.size(); i++)
     {
-        C[i] = 1 / (mat.getDensity() * mat.getSpecificHeatCapacity() * bar(position[i]));
+        C[i] = 1 / (mat.getDensity() * mat.getSpecificHeatCapacity()) * bar(position[i]);
     }
 }
 
@@ -193,6 +194,7 @@ void Bar::solve(const std::vector<double>& time, const std::vector<double>& posi
         sol[i].resize(position.size());
     }
     sol[0] = std::vector<double>(position.size(), u0);
+    sol[0][0] = 273.15;
     cThread.join();
     adAhnThread.join();
     std::vector<std::vector<double>> AdAhn2 = AdAhn;
@@ -208,6 +210,7 @@ void Bar::solve(const std::vector<double>& time, const std::vector<double>& posi
             AdAhn2[i][i + 1] *= (time[1] - time[0]);
         }
     }
+    
     for (size_t i = 1; i < time.size(); i++)
     {
         std::vector<double> termSol1;
@@ -219,11 +222,11 @@ void Bar::solve(const std::vector<double>& time, const std::vector<double>& posi
         termSol1Thread.join();
         termSol2Thread.join();
 
-        for (size_t j = 0; j < position.size(); j++)
+        for (size_t j = 1; j < position.size() - 1; j++)
         {
             sol[i][j] = termSol1[j] + termSol2[j];
         }
-        sol[i][0] = 0;
+        sol[i][0] = 273.15;
         sol[i][position.size() - 1] = u0;
     }
 }
