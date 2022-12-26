@@ -78,25 +78,30 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="bar_8h.html">bar.h</a>&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="plate_8h.html">plate.h</a>&quot;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_sdl.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sdl.html">Sdl</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">/* data */</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_sdl.html#adc501e37d45c124f9382ded1a888f0a7">Sdl</a>(<span class="comment">/* args */</span>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_sdl.html#a855bbadc37c0f1e224fb1c8c1ab579d4">~Sdl</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91">SdlBarRunWindow</a>(<span class="keyword">const</span> <a class="code" href="class_bar.html">Bar</a>&amp; bar, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; time, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; position, std::vector&lt;std::vector&lt;double&gt;&gt;&amp; sol);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// SDL_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_sdl.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sdl.html">Sdl</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">/* data */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_sdl.html#adc501e37d45c124f9382ded1a888f0a7">Sdl</a>(<span class="comment">/* args */</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_sdl.html#a855bbadc37c0f1e224fb1c8c1ab579d4">~Sdl</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91">SdlBarRunWindow</a>(<span class="keyword">const</span> <a class="code" href="class_bar.html">Bar</a>&amp; bar, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; time, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; position, std::vector&lt;std::vector&lt;double&gt;&gt;&amp; sol);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="class_sdl.html#a855bbadc37c0f1e224fb1c8c1ab579d4">~Sdl</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91">SdlBarRunWindow</a>(<span class="keyword">const</span> <a class="code" href="class_plate.html">Plate</a>&amp; plate, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; time, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; positionX, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; positionY, std::vector&lt;std::vector&lt;std::vector&lt;double&gt;&gt;&gt;&amp; sol);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// SDL_H</span></div>
 <div class="ttc" id="abar_8h_html"><div class="ttname"><a href="bar_8h.html">bar.h</a></div><div class="ttdoc">Provides.</div></div>
 <div class="ttc" id="aclass_bar_html"><div class="ttname"><a href="class_bar.html">Bar</a></div><div class="ttdoc">Class for the bar model.</div><div class="ttdef"><b>Definition:</b> <a href="bar_8h_source.html#l00023">bar.h:24</a></div></div>
-<div class="ttc" id="aclass_sdl_html"><div class="ttname"><a href="class_sdl.html">Sdl</a></div><div class="ttdoc">Class for the SDL library.</div><div class="ttdef"><b>Definition:</b> <a href="sdl_8h_source.html#l00024">sdl.h:25</a></div></div>
+<div class="ttc" id="aclass_plate_html"><div class="ttname"><a href="class_plate.html">Plate</a></div><div class="ttdoc">Class representing a plate.</div><div class="ttdef"><b>Definition:</b> <a href="plate_8h_source.html#l00023">plate.h:24</a></div></div>
+<div class="ttc" id="aclass_sdl_html"><div class="ttname"><a href="class_sdl.html">Sdl</a></div><div class="ttdoc">Class for the SDL library.</div><div class="ttdef"><b>Definition:</b> <a href="sdl_8h_source.html#l00025">sdl.h:26</a></div></div>
 <div class="ttc" id="aclass_sdl_html_a855bbadc37c0f1e224fb1c8c1ab579d4"><div class="ttname"><a href="class_sdl.html#a855bbadc37c0f1e224fb1c8c1ab579d4">Sdl::~Sdl</a></div><div class="ttdeci">~Sdl()</div><div class="ttdoc">Destroy the Sdl object.</div><div class="ttdef"><b>Definition:</b> <a href="sdl_8cpp_source.html#l00019">sdl.cpp:19</a></div></div>
 <div class="ttc" id="aclass_sdl_html_ab38899d27d92fbb2896dc0bb0f6d4c91"><div class="ttname"><a href="class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91">Sdl::SdlBarRunWindow</a></div><div class="ttdeci">static void SdlBarRunWindow(const Bar &amp;bar, const std::vector&lt; double &gt; &amp;time, const std::vector&lt; double &gt; &amp;position, std::vector&lt; std::vector&lt; double &gt;&gt; &amp;sol)</div><div class="ttdoc">Run the SDL window.</div><div class="ttdef"><b>Definition:</b> <a href="sdl_8cpp_source.html#l00023">sdl.cpp:23</a></div></div>
 <div class="ttc" id="aclass_sdl_html_adc501e37d45c124f9382ded1a888f0a7"><div class="ttname"><a href="class_sdl.html#adc501e37d45c124f9382ded1a888f0a7">Sdl::Sdl</a></div><div class="ttdeci">Sdl()</div><div class="ttdoc">Construct a new Sdl object.</div><div class="ttdef"><b>Definition:</b> <a href="sdl_8cpp_source.html#l00015">sdl.cpp:15</a></div></div>
+<div class="ttc" id="aplate_8h_html"><div class="ttname"><a href="plate_8h.html">plate.h</a></div><div class="ttdoc">Provides the Plate class.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,0 +1,5 @@
+<map id="Plate::solve" name="Plate::solve">
+<area shape="rect" id="node1" title="Solve the plate model, using a finite differences method." alt="" coords="247,5,345,32"/>
+<area shape="rect" id="node2" href="$computation_8h.html#a5d20313aedb111f086b52f9a94f29175" title="Solve the plate." alt="" coords="108,5,199,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
+</map>
