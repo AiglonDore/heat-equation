@@ -137,4 +137,92 @@ void solvePlate(const Plate &plate, const std::string& filename, bool nogui)
     timeThread.join();
     positionXThread.join();
     positionYThread.join();
+
+    plate.solve(time, positionX, positionY, sol);
+
+    std::cout << "Solution computed." << std::endl;
+    if (filename != "")
+    {
+        std::ofstream file(filename);
+        if (!file.is_open())
+        {
+            throw std::runtime_error("Unable to open file " + filename);
+        }
+
+        for (size_t i = 0; i < positionX.size(); i++)
+        {
+            file << positionX[i] << ",";
+        }
+        file << std::endl;
+        
+        for (size_t i = 0; i < positionY.size(); i++)
+        {
+            file << positionY[i] << ",";
+        }
+        file << std::endl;
+        
+        for (size_t i = 0; i < time.size(); i++)
+        {
+            file << time[i] << ",";
+            for (size_t j = 0; j < positionX.size(); j++)
+            {
+                for (size_t k = 0; k < positionY.size(); k++)
+                {
+                    file << sol[i][j * positionY.size() + k] << ",";
+                }
+            }
+            file << std::endl;
+        }
+        file.close();
+        std::cout << "Solution saved in " << filename << std::endl;
+    }
+    if (!nogui)
+    {
+        std::cout << "Displaying solution in GUI..." << std::endl;
+        std::cout << "Initializing SDL..." << std::endl;
+        std::vector<std::vector<std::vector<double>>> solForSDL;
+        for (size_t i = 0; i < time.size(); i++)
+        {
+            std::vector<std::vector<double>> solForSDLi;
+            for (size_t j = 0; j < positionX.size(); j++)
+            {
+                std::vector<double> solForSDLij;
+                for (size_t k = 0; k < positionY.size(); k++)
+                {
+                    solForSDLij.push_back(sol[i][j * positionY.size() + k]);
+                }
+                solForSDLi.push_back(solForSDLij);
+            }
+            solForSDL.push_back(solForSDLi);
+        }
+        Sdl::SdlBarRunWindow(plate, time, positionX, positionY, solForSDL);
+    }
+    else
+    {
+        std::cout << "Displaying solution in console..." << std::endl;
+        for (size_t i = 0; i < positionX.size(); i++)
+        {
+            std::cout << positionX[i] << ",";
+        }
+        std::cout << std::endl;
+        
+        for (size_t i = 0; i < positionY.size(); i++)
+        {
+            std::cout << positionY[i] << ",";
+        }
+        std::cout << std::endl;
+        
+        for (size_t i = 0; i < time.size(); i++)
+        {
+            std::cout << time[i] << ",";
+            for (size_t j = 0; j < positionX.size(); j++)
+            {
+                for (size_t k = 0; k < positionY.size(); k++)
+                {
+                    std::cout << sol[i][j * positionY.size() + k] << ",";
+                }
+            }
+            std::cout << std::endl;
+        }
+    }
 }
