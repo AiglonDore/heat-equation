@@ -15,6 +15,7 @@
 #include <SDL2/SDL.h>
 #include <vector>
 #include "bar.h"
+#include "plate.h"
 
 
 /**
@@ -45,6 +46,17 @@ public:
      * @param sol Solution.
      */
     static void SdlBarRunWindow(const Bar& bar, const std::vector<double>& time, const std::vector<double>& position, std::vector<std::vector<double>>& sol);
+    ~Sdl();
+    /**
+     * @brief Run the SDL window.
+     * @throws Exn if the window cannot be created.
+     * @param plate Plate.
+     * @param time Time values.
+     * @param positionX Position values along x.
+     * @param positionY Position values along y.
+     * @param sol Solution.
+     */
+    static void SdlBarRunWindow(const Plate& plate, const std::vector<double>& time, const std::vector<double>& positionX, const std::vector<double>& positionY, std::vector<std::vector<std::vector<double>>>& sol);
 };
 
 #endif // SDL_H
