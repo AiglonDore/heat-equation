@@ -46,7 +46,6 @@ public:
      * @param sol Solution.
      */
     static void SdlBarRunWindow(const Bar& bar, const std::vector<double>& time, const std::vector<double>& position, std::vector<std::vector<double>>& sol);
-    ~Sdl();
     /**
      * @brief Run the SDL window.
      * @throws Exn if the window cannot be created.
