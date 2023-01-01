@@ -10,7 +10,7 @@ SDL=-D_REENTRANT -I/usr/include/SDL2 -lSDL2
 
 all : heat-equation.out
 
-heat-equation.out : obj/main.o obj/exn.o obj/materials.o obj/bar.o obj/computation.o obj/sdl.o obj/plate.o
+heat-equation.out : obj/main.o obj/exn.o obj/materials.o obj/bar.o obj/computation.o obj/sdl.o obj/plate.o obj/utils.o
 	$(CC) $(CFLAGS) -o bin/$@ $^ $(SDL)
 
 obj/main.o : src/main.cpp header/exn.h header/materials.h
@@ -32,6 +32,9 @@ obj/sdl.o : src/sdl.cpp header/sdl.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 obj/plate.o : src/plate.cpp header/plate.h header/exn.h header/materials.h header/sdl.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+obj/utils.o : src/utils.cpp header/utils.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean :

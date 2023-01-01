@@ -25,7 +25,6 @@ void solveBar(const Bar &bar, const std::string& filename, bool nogui)
     
     std::vector<double> time;
     std::vector<double> position;
-    std::vector<std::vector<double>> sol;
 
     double dt = tMax / 1000;
     std::thread timeThread([&time, tMax, dt]()
@@ -42,9 +41,11 @@ void solveBar(const Bar &bar, const std::string& filename, bool nogui)
             position.push_back(x);
         }
     });
+    
     timeThread.join();
     positionThread.join();
-
+    
+    std::vector<std::vector<double>> sol(time.size(), std::vector<double>(position.size(), 0));
     bar.solve(time, position, sol);
 
     std::cout << "Solution computed." << std::endl;
@@ -86,16 +87,16 @@ void solveBar(const Bar &bar, const std::string& filename, bool nogui)
         std::cout << "Displaying solution in console..." << std::endl;
         for (size_t i = 0; i < position.size(); i++)
         {
-            std::cout << position[i] << ",";
+            std::cout << position[i] << " ";
         }
         std::cout << std::endl;
         
         for (size_t i = 0; i < time.size(); i++)
         {
-            std::cout << time[i] << ",";
+            std::cout << time[i] << " ";
             for (size_t j = 0; j < position.size(); j++)
             {
-                std::cout << sol[i][j] << ",";
+                std::cout << sol[i][j] << " ";
             }
             std::cout << std::endl;
         }

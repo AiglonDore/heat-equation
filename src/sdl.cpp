@@ -51,6 +51,7 @@ void Sdl::SdlBarRunWindow(const Bar &bar, const std::vector<double> &time, const
             if (event.type == SDL_QUIT)
             {
                 quit = true;
+                break;
             }
             else if (!plot)
             {
