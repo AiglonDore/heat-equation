@@ -67,8 +67,6 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">bar.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -79,41 +77,32 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="bar_8h_source.html">../header/bar.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="exn_8h_source.html">../header/exn.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="materials_8h_source.html">../header/materials.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">../header/utils.h</a>&quot;</code><br />
 <code>#include &lt;thread&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for bar.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="bar_8cpp__incl.png" border="0" usemap="#asrc_2bar_8cpp" alt=""/></div>
 <map name="asrc_2bar_8cpp" id="asrc_2bar_8cpp">
-<area shape="rect" title="Implements bar.h." alt="" coords="359,5,451,32"/>
-<area shape="rect" href="bar_8h.html" title="Provides." alt="" coords="71,80,186,107"/>
-<area shape="rect" href="exn_8h.html" title="Provides the Exn class to deal with exceptions." alt="" coords="443,80,561,107"/>
-<area shape="rect" href="materials_8h.html" title="Provides material data." alt="" coords="210,80,367,107"/>
-<area shape="rect" title=" " alt="" coords="342,155,393,181"/>
-<area shape="rect" title=" " alt="" coords="586,80,650,107"/>
+<area shape="rect" title="Implements bar.h." alt="" coords="537,5,629,32"/>
+<area shape="rect" href="bar_8h.html" title="Provides." alt="" coords="366,80,481,107"/>
+<area shape="rect" href="exn_8h.html" title="Provides the Exn class to deal with exceptions." alt="" coords="76,80,195,107"/>
+<area shape="rect" href="materials_8h.html" title="Provides material data." alt="" coords="505,80,662,107"/>
+<area shape="rect" title=" " alt="" coords="639,155,690,181"/>
+<area shape="rect" href="utils_8h.html" title="Provides utility functions." alt="" coords="219,80,342,107"/>
+<area shape="rect" title=" " alt="" coords="737,80,801,107"/>
+<area shape="rect" title=" " alt="" coords="825,80,905,107"/>
+<area shape="rect" title=" " alt="" coords="380,155,467,181"/>
+<area shape="rect" title=" " alt="" coords="522,155,581,181"/>
+<area shape="rect" title=" " alt="" coords="272,155,335,181"/>
+<area shape="rect" title=" " alt="" coords="116,155,203,181"/>
 <area shape="rect" title=" " alt="" coords="5,155,92,181"/>
-<area shape="rect" title=" " alt="" coords="241,155,299,181"/>
-<area shape="rect" title=" " alt="" coords="116,155,179,181"/>
-<area shape="rect" title=" " alt="" coords="428,155,515,181"/>
-<area shape="rect" title=" " alt="" coords="539,155,625,181"/>
 </map>
 </div>
 </div>
 <p><a href="bar_8cpp_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ab20a1dfee5d4495546d11e3ee78aab19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bar_8cpp.html#ab20a1dfee5d4495546d11e3ee78aab19">makeC</a> (const std::vector&lt; double &gt; &amp;position, const <a class="el" href="class_material.html">Material</a> &amp;mat, const <a class="el" href="class_bar.html">Bar</a> &amp;bar, std::vector&lt; double &gt; &amp;C)</td></tr>
-<tr class="memdesc:ab20a1dfee5d4495546d11e3ee78aab19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the C vector (second member of the equation).  <a href="bar_8cpp.html#ab20a1dfee5d4495546d11e3ee78aab19">More...</a><br /></td></tr>
-<tr class="separator:ab20a1dfee5d4495546d11e3ee78aab19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafad520d27dfd7f8fb4bcedd7adc6787"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bar_8cpp.html#aafad520d27dfd7f8fb4bcedd7adc6787">makeAdAhn</a> (const std::vector&lt; double &gt; time, const std::vector&lt; double &gt; position, const <a class="el" href="class_material.html">Material</a> &amp;mat, std::vector&lt; std::vector&lt; double &gt;&gt; &amp;AdAhn)</td></tr>
-<tr class="memdesc:aafad520d27dfd7f8fb4bcedd7adc6787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the AdAhn matrix (first member of the equation).  <a href="bar_8cpp.html#aafad520d27dfd7f8fb4bcedd7adc6787">More...</a><br /></td></tr>
-<tr class="separator:aafad520d27dfd7f8fb4bcedd7adc6787"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad52c5ee33e96633783486e431db3ed4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bar_8cpp.html#ad52c5ee33e96633783486e431db3ed4a">computeTermSol</a> (const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;mat, const std::vector&lt; double &gt; &amp;vec, std::vector&lt; double &gt; &amp;sol)</td></tr>
-<tr class="memdesc:ad52c5ee33e96633783486e431db3ed4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the solution of the equation.  <a href="bar_8cpp.html#ad52c5ee33e96633783486e431db3ed4a">More...</a><br /></td></tr>
-<tr class="separator:ad52c5ee33e96633783486e431db3ed4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements <a class="el" href="bar_8h.html">bar.h</a>. </p>
 <dl class="section author"><dt>Author</dt><dd>Thomas Roiseux </dd></dl>
@@ -122,214 +111,7 @@ Functions</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="bar_8cpp_source.html">bar.cpp</a>.</p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="ad52c5ee33e96633783486e431db3ed4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad52c5ee33e96633783486e431db3ed4a">&#9670;&nbsp;</a></span>computeTermSol()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void computeTermSol </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>mat</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>vec</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>sol</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compute the solution of the equation. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mat</td><td>Matrix of the equation. </td></tr>
-    <tr><td class="paramname">vec</td><td>Vector of the equation. </td></tr>
-    <tr><td class="paramname">sol</td><td>Vector to fill. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="bar_8cpp_source.html#l00141">141</a> of file <a class="el" href="bar_8cpp_source.html">bar.cpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="bar_8cpp_ad52c5ee33e96633783486e431db3ed4a_icgraph.png" border="0" usemap="#abar_8cpp_ad52c5ee33e96633783486e431db3ed4a_icgraph" alt=""/></div>
-<map name="abar_8cpp_ad52c5ee33e96633783486e431db3ed4a_icgraph" id="abar_8cpp_ad52c5ee33e96633783486e431db3ed4a_icgraph">
-<area shape="rect" title="Compute the solution of the equation." alt="" coords="369,5,500,32"/>
-<area shape="rect" href="class_bar.html#a125b6a48d09e40d05a885b98a3a4c670" title="Solve the bar model, using a finite differences method." alt="" coords="235,5,321,32"/>
-<area shape="rect" href="computation_8h.html#adbb6a6e1d20fc59b4678e9d0d6218a7d" title="Solve the bar." alt="" coords="108,5,187,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="aafad520d27dfd7f8fb4bcedd7adc6787"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafad520d27dfd7f8fb4bcedd7adc6787">&#9670;&nbsp;</a></span>makeAdAhn()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void makeAdAhn </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; double &gt;&#160;</td>
-          <td class="paramname"><em>time</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; double &gt;&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="class_material.html">Material</a> &amp;&#160;</td>
-          <td class="paramname"><em>mat</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::vector&lt; double &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>AdAhn</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compute the AdAhn matrix (first member of the equation). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">time</td><td>Vector of the time. </td></tr>
-    <tr><td class="paramname">position</td><td>Vector of the position. </td></tr>
-    <tr><td class="paramname">mat</td><td><a class="el" href="class_material.html" title="Material class.">Material</a>. </td></tr>
-    <tr><td class="paramname">AdAhn</td><td>Matrix to fill. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="bar_8cpp_source.html#l00046">46</a> of file <a class="el" href="bar_8cpp_source.html">bar.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="bar_8cpp_aafad520d27dfd7f8fb4bcedd7adc6787_cgraph.png" border="0" usemap="#abar_8cpp_aafad520d27dfd7f8fb4bcedd7adc6787_cgraph" alt=""/></div>
-<map name="abar_8cpp_aafad520d27dfd7f8fb4bcedd7adc6787_cgraph" id="abar_8cpp_aafad520d27dfd7f8fb4bcedd7adc6787_cgraph">
-<area shape="rect" title="Compute the AdAhn matrix (first member of the equation)." alt="" coords="5,64,105,91"/>
-<area shape="rect" href="class_material.html#a5790aca903dbc72bbc2d086fbc4b8e74" title="Get the Density object." alt="" coords="197,5,351,32"/>
-<area shape="rect" href="class_material.html#a72e97739e7856cf4939d0a1b3d969f0c" title="Get the Specific Heat Capacity object." alt="" coords="181,57,367,98"/>
-<area shape="rect" href="class_material.html#a29c6d17f98cacf4ec0477a30994f3712" title="Get the Thermal Conductivity object." alt="" coords="153,123,395,149"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="bar_8cpp_aafad520d27dfd7f8fb4bcedd7adc6787_icgraph.png" border="0" usemap="#abar_8cpp_aafad520d27dfd7f8fb4bcedd7adc6787_icgraph" alt=""/></div>
-<map name="abar_8cpp_aafad520d27dfd7f8fb4bcedd7adc6787_icgraph" id="abar_8cpp_aafad520d27dfd7f8fb4bcedd7adc6787_icgraph">
-<area shape="rect" title="Compute the AdAhn matrix (first member of the equation)." alt="" coords="369,5,469,32"/>
-<area shape="rect" href="class_bar.html#a125b6a48d09e40d05a885b98a3a4c670" title="Solve the bar model, using a finite differences method." alt="" coords="235,5,321,32"/>
-<area shape="rect" href="computation_8h.html#adbb6a6e1d20fc59b4678e9d0d6218a7d" title="Solve the bar." alt="" coords="108,5,187,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="ab20a1dfee5d4495546d11e3ee78aab19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab20a1dfee5d4495546d11e3ee78aab19">&#9670;&nbsp;</a></span>makeC()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void makeC </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>position</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="class_material.html">Material</a> &amp;&#160;</td>
-          <td class="paramname"><em>mat</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="class_bar.html">Bar</a> &amp;&#160;</td>
-          <td class="paramname"><em>bar</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>C</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compute the C vector (second member of the equation). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">position</td><td>Vector of the position. </td></tr>
-    <tr><td class="paramname">mat</td><td><a class="el" href="class_material.html" title="Material class.">Material</a>. </td></tr>
-    <tr><td class="paramname">bar</td><td><a class="el" href="class_bar.html" title="Class for the bar model.">Bar</a>. </td></tr>
-    <tr><td class="paramname">C</td><td>Vector to fill. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="bar_8cpp_source.html#l00028">28</a> of file <a class="el" href="bar_8cpp_source.html">bar.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="bar_8cpp_ab20a1dfee5d4495546d11e3ee78aab19_cgraph.png" border="0" usemap="#abar_8cpp_ab20a1dfee5d4495546d11e3ee78aab19_cgraph" alt=""/></div>
-<map name="abar_8cpp_ab20a1dfee5d4495546d11e3ee78aab19_cgraph" id="abar_8cpp_ab20a1dfee5d4495546d11e3ee78aab19_cgraph">
-<area shape="rect" title="Compute the C vector (second member of the equation)." alt="" coords="5,35,72,61"/>
-<area shape="rect" href="class_material.html#a5790aca903dbc72bbc2d086fbc4b8e74" title="Get the Density object." alt="" coords="136,5,291,32"/>
-<area shape="rect" href="class_material.html#a72e97739e7856cf4939d0a1b3d969f0c" title="Get the Specific Heat Capacity object." alt="" coords="120,57,307,98"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="bar_8cpp_ab20a1dfee5d4495546d11e3ee78aab19_icgraph.png" border="0" usemap="#abar_8cpp_ab20a1dfee5d4495546d11e3ee78aab19_icgraph" alt=""/></div>
-<map name="abar_8cpp_ab20a1dfee5d4495546d11e3ee78aab19_icgraph" id="abar_8cpp_ab20a1dfee5d4495546d11e3ee78aab19_icgraph">
-<area shape="rect" title="Compute the C vector (second member of the equation)." alt="" coords="369,5,436,32"/>
-<area shape="rect" href="class_bar.html#a125b6a48d09e40d05a885b98a3a4c670" title="Solve the bar model, using a finite differences method." alt="" coords="235,5,321,32"/>
-<area shape="rect" href="computation_8h.html#adbb6a6e1d20fc59b4678e9d0d6218a7d" title="Solve the bar." alt="" coords="108,5,187,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
-</map>
-</div>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

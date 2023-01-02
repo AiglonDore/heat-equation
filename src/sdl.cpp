@@ -20,6 +20,12 @@ Sdl::~Sdl()
 {
 }
 
+/**
+ * @brief Get the max of a double vector.
+ * 
+ * @param v Vector.
+ * @return double max.
+ */
 double max(const std::vector<double> &v)
 {
     double max = v[0];

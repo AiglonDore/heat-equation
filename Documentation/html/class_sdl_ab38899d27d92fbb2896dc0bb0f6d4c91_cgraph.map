@@ -1,0 +1,5 @@
+<map id="Sdl::SdlBarRunWindow" name="Sdl::SdlBarRunWindow">
+<area shape="rect" id="node1" title="Run the SDL window." alt="" coords="5,31,175,57"/>
+<area shape="rect" id="node2" href="$class_bar.html#aed959fd048ad91636b51f358538786e1" title="Get the L object." alt="" coords="223,5,303,32"/>
+<area shape="rect" id="node3" href="$sdl_8cpp.html#a5989af50308dd69fcab93e63a73a1d88" title="Get the max of a double vector." alt="" coords="237,56,288,83"/>
+</map>

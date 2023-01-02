@@ -1,13 +1,13 @@
 <map id="solveBar" name="solveBar">
-<area shape="rect" id="node1" title="Solve the bar." alt="" coords="5,81,84,108"/>
-<area shape="rect" id="node2" href="$class_bar.html#aed959fd048ad91636b51f358538786e1" title="Get the L object." alt="" coords="177,5,257,32"/>
-<area shape="rect" id="node3" href="$class_bar.html#a3a9ee570a559374dc3a4ffed850be14a" title="Get the TMax object." alt="" coords="162,56,271,83"/>
-<area shape="rect" id="node4" href="$class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91" title="Run the SDL window." alt="" coords="132,107,301,133"/>
-<area shape="rect" id="node5" href="$class_bar.html#a125b6a48d09e40d05a885b98a3a4c670" title="Solve the bar model, using a finite differences method." alt="" coords="173,157,260,184"/>
-<area shape="rect" id="node6" href="$bar_8cpp.html#ad52c5ee33e96633783486e431db3ed4a" title="Compute the solution of the equation." alt="" coords="349,107,480,133"/>
-<area shape="rect" id="node7" href="$bar_8cpp.html#aafad520d27dfd7f8fb4bcedd7adc6787" title="Compute the AdAhn matrix (first member of the equation)." alt="" coords="365,208,465,235"/>
-<area shape="rect" id="node11" href="$bar_8cpp.html#ab20a1dfee5d4495546d11e3ee78aab19" title="Compute the C vector (second member of the equation)." alt="" coords="381,157,448,184"/>
-<area shape="rect" id="node8" href="$class_material.html#a5790aca903dbc72bbc2d086fbc4b8e74" title="Get the Density object." alt="" coords="571,208,726,235"/>
-<area shape="rect" id="node9" href="$class_material.html#a72e97739e7856cf4939d0a1b3d969f0c" title="Get the Specific Heat Capacity object." alt="" coords="555,142,742,183"/>
-<area shape="rect" id="node10" href="$class_material.html#a29c6d17f98cacf4ec0477a30994f3712" title="Get the Thermal Conductivity object." alt="" coords="528,259,769,285"/>
+<area shape="rect" id="node1" title="Solve the bar." alt="" coords="5,69,84,96"/>
+<area shape="rect" id="node2" href="$class_bar.html#aed959fd048ad91636b51f358538786e1" title="Get the L object." alt="" coords="430,5,510,32"/>
+<area shape="rect" id="node3" href="$class_bar.html#a3a9ee570a559374dc3a4ffed850be14a" title="Get the TMax object." alt="" coords="162,44,271,71"/>
+<area shape="rect" id="node4" href="$class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91" title="Run the SDL window." alt="" coords="132,95,301,121"/>
+<area shape="rect" id="node6" href="$class_bar.html#a125b6a48d09e40d05a885b98a3a4c670" title="Solve the bar model, using a finite differences method." alt="" coords="173,220,260,247"/>
+<area shape="rect" id="node5" href="$sdl_8cpp.html#a5989af50308dd69fcab93e63a73a1d88" title="Get the max of a double vector." alt="" coords="445,81,495,108"/>
+<area shape="rect" id="node7" href="$class_material.html#a5790aca903dbc72bbc2d086fbc4b8e74" title="Get the Density object." alt="" coords="393,132,547,159"/>
+<area shape="rect" id="node8" href="$class_material.html#a72e97739e7856cf4939d0a1b3d969f0c" title="Get the Specific Heat Capacity object." alt="" coords="377,183,563,225"/>
+<area shape="rect" id="node9" href="$class_material.html#a29c6d17f98cacf4ec0477a30994f3712" title="Get the Thermal Conductivity object." alt="" coords="349,249,591,276"/>
+<area shape="rect" id="node10" href="$utils_8h.html#a048ac09f63343fbf650aa6110b35329f" title="Computes LU decomposition." alt="" coords="426,300,514,327"/>
+<area shape="rect" id="node11" href="$utils_8h.html#a10facb4350e54ad4926dc029144b53f6" title="Solves a linear system." alt="" coords="435,351,505,377"/>
 </map>

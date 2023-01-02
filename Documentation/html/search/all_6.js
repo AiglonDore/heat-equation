@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['licence_18',['LICENCE',['../md__l_i_c_e_n_c_e.html',1,'']]]
+  ['ismaterial_17',['isMaterial',['../class_material.html#a4679f4d853f5d5d78288976e534dfb5b',1,'Material']]]
 ];

@@ -152,6 +152,10 @@ int main(int argc, char *argv[])
     bool nogui = false;
     try
     {
+        if (u0 < 0 || L < 0 || tMax < 0 || f < 0 || material == "")
+        {
+            throw Exn("Not enough arguments.");
+        }
         parseArguments(argc, argv, u0, L, tMax, f, material, plate, filename, nogui);
         if (!plate)
         {

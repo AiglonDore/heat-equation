@@ -1,0 +1,7 @@
+<map id="max" name="max">
+<area shape="rect" id="node1" title="Get the max of a double vector." alt="" coords="464,31,515,57"/>
+<area shape="rect" id="node2" href="$class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91" title="Run the SDL window." alt="" coords="247,31,416,57"/>
+<area shape="rect" id="node3" href="$computation_8h.html#adbb6a6e1d20fc59b4678e9d0d6218a7d" title="Solve the bar." alt="" coords="114,5,193,32"/>
+<area shape="rect" id="node5" href="$computation_8h.html#a5d20313aedb111f086b52f9a94f29175" title="Solve the plate." alt="" coords="108,56,199,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,31,60,57"/>
+</map>

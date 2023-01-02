@@ -3,5 +3,7 @@
 <area shape="rect" id="node2" href="$class_plate.html#ac7da7739b8cd47cab7319eb7929ead2f" title="Get the L object." alt="" coords="183,5,274,32"/>
 <area shape="rect" id="node3" href="$class_plate.html#a3ea3a1d68cc34c60e2de2a8650548f4e" title="Get the TMax object." alt="" coords="169,56,289,83"/>
 <area shape="rect" id="node4" href="$class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91" title="Run the SDL window." alt="" coords="144,107,313,133"/>
-<area shape="rect" id="node5" href="$class_plate.html#adfc39a660b6c18c7177146d1acebcb86" title="Solve the plate model, using a finite differences method." alt="" coords="179,157,278,184"/>
+<area shape="rect" id="node7" href="$class_plate.html#adfc39a660b6c18c7177146d1acebcb86" title="Solve the plate model, using a finite differences method." alt="" coords="179,157,278,184"/>
+<area shape="rect" id="node5" href="$class_bar.html#aed959fd048ad91636b51f358538786e1" title="Get the L object." alt="" coords="361,81,441,108"/>
+<area shape="rect" id="node6" href="$sdl_8cpp.html#a5989af50308dd69fcab93e63a73a1d88" title="Get the max of a double vector." alt="" coords="376,132,427,159"/>
 </map>

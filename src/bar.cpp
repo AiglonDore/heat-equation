@@ -48,69 +48,63 @@ Bar::~Bar()
 void Bar::solve(const std::vector<double> &time, const std::vector<double> &position, std::vector<std::vector<double>> &sol) const
 {
     const Material &mat = Material::materials[material];
-    std::vector<double> C(position.size());
     sol.resize(time.size());
-
-    for (size_t i = 0; i < sol.size(); i++)
+    for (size_t i = 0; i < time.size(); i++)
     {
-        sol[i][sol[i].size() - 1] = u0;
+        sol[i].resize(position.size());
         sol[0][i] = u0;
+        sol[i][position.size() - 1] = u0;
     }
-
-    std::thread cThread([this, &time, &position, &C, &mat]()
-                        {
-        for (size_t i = 0; i < position.size(); i++)
-        {
-            C[i] = this->F(position[i]) / (mat.getDensity() * mat.getSpecificHeatCapacity());
-        }; });
-
-    const double dt = time[1] - time[0];
     const double dx = position[1] - position[0];
-    const double coef = mat.getThermalConductivity() / (mat.getDensity() * mat.getSpecificHeatCapacity());
-    const double B = coef / (dx * dx);
-    const double Cc =  (-coef * 2 / (dx * dx) + 1 / dt);
+    
+    const double dt = time[1] - time[0];
+    const double a = - (2 * mat.getThermalConductivity() / (mat.getDensity() * mat.getSpecificHeatCapacity() * dx * dx) + 1 / dt);
+    const double b = mat.getThermalConductivity() / (mat.getDensity() * mat.getSpecificHeatCapacity() * dx * dx);
 
-    std::vector<std::vector<double>> A(position.size(), std::vector<double>(position.size(), 0));
+    std::vector<std::vector<double>> A(position.size(), std::vector<double>(position.size(), 0.0));
 
-    std::thread aThread([this, &position, &time, &A, &mat, &dt, &dx, &coef, &B, &Cc]()
-                        {
-        
+    std::thread aThread([this, &a,&b, &A](){
         for (size_t i = 0; i < A.size(); i++)
         {
-            A[i][i] = Cc;
-            if (i != 0)
+            A[i][i] = a;
+            if (i > 0)
             {
-                A[i][i - 1] = B;
+                A[i][i - 1] = b;
             }
-            if (i != A.size() - 2)
+            if (i < A.size() - 1)
             {
-                A[i][i + 1] = B;
+                A[i][i + 1] = b;
             }
-        } });
+        }
+    });
+    std::vector<double> C(position.size(), 0.0);
+    std::thread cThread([this, &mat, &C, &position](){
+        for (size_t i = 0; i < C.size(); i++)
+        {
+            C[i] =  -1 / (mat.getDensity() * mat.getSpecificHeatCapacity()) * this->F(position[i]);
+        }
+    });
+    
 
-    cThread.join();
+    std::vector<double> B(position.size(), 0.0);
+    B[position.size() - 1] = - b * u0;
+    B[0] = -b * u0;
+
     aThread.join();
+    cThread.join();
 
-    std::vector<double> l(A.size(), 0);
-    l[0] = - B * sol[0][0];
-    l[l.size() - 1] = - B * sol[0][sol[0].size() - 1];
-
-    std::vector<std::vector<double>> L(A.size(), std::vector<double>(A.size(), 0));
-    std::vector<std::vector<double>> U(A.size(), std::vector<double>(A.size(), 0));
-    luDecomp(A, L, U);
+    std::vector<std::vector<double>> l(time.size(),std::vector<double>(time.size(), 0.0)), u(time.size(),std::vector<double>(time.size(), 0.0));
+    luDecomp(A, l, u);
     for (size_t i = 0; i < time.size() - 1; i++)
     {
         std::vector<double> values(sol[i]);
+        std::vector<double> result(sol[i].size());
         for (size_t i = 0; i < values.size(); i++)
         {
-            values[i] *= - 1 / dt;
-            values[i] += l[i];
-            values[i] -= C[i];
+            values[i] *= -1 / dt;
+            values[i] += B[i] + C[i];
         }
-
-        luSolve(L, U, values, values);
-        sol[i + 1] = values;
-        l[0] = - B * values[0];
-        l[l.size() - 1] = - B * sol[i][values.size() - 1];
+        luSolve(l, u, values, result);
+        sol[i + 1] = result;
     }
 }

@@ -83,49 +83,77 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91">Sdl::SdlBarRunWindow</a>(<span class="keyword">const</span> <a class="code" href="class_bar.html">Bar</a>&amp; bar, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; time, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; position, std::vector&lt;std::vector&lt;double&gt;&gt;&amp; sol)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER) != 0)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_exn.html">Exn</a>((std::string(<span class="stringliteral">&quot;SDL_Init Error: &quot;</span>) + SDL_GetError()).c_str());</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    SDL_Window* window = SDL_CreateWindow(<span class="stringliteral">&quot;Heat equation solution for a bar&quot;</span>, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 1280, 720, SDL_WINDOW_SHOWN);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    SDL_Event event;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> quit = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">while</span> (!quit)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">while</span> (SDL_PollEvent(&amp;event))</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">if</span> (event.type == SDL_QUIT)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                quit = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        SDL_RenderClear(renderer);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        SDL_RenderPresent(renderer);</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="sdl_8cpp.html#a5989af50308dd69fcab93e63a73a1d88">   29</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="sdl_8cpp.html#a5989af50308dd69fcab93e63a73a1d88">max</a>(<span class="keyword">const</span> std::vector&lt;double&gt; &amp;v)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="sdl_8cpp.html#a5989af50308dd69fcab93e63a73a1d88">max</a> = v[0];</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt; v.size(); i++)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span> (v[i] &gt; <a class="code" href="sdl_8cpp.html#a5989af50308dd69fcab93e63a73a1d88">max</a>)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <a class="code" href="sdl_8cpp.html#a5989af50308dd69fcab93e63a73a1d88">max</a> = v[i];</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="sdl_8cpp.html#a5989af50308dd69fcab93e63a73a1d88">max</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91">   42</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91">Sdl::SdlBarRunWindow</a>(<span class="keyword">const</span> <a class="code" href="class_bar.html">Bar</a> &amp;bar, <span class="keyword">const</span> std::vector&lt;double&gt; &amp;time, <span class="keyword">const</span> std::vector&lt;double&gt; &amp;position, std::vector&lt;std::vector&lt;double&gt;&gt; &amp;sol)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span> (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER) != 0)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_exn.html">Exn</a>((std::string(<span class="stringliteral">&quot;SDL_Init Error: &quot;</span>) + SDL_GetError()).c_str());</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    SDL_DestroyRenderer(renderer);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    SDL_DestroyWindow(window);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    SDL_Quit();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_sdl.html#a1fadd49c3852c8b34e5d420c55a2e357">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91">Sdl::SdlBarRunWindow</a>(<span class="keyword">const</span> <a class="code" href="class_plate.html">Plate</a>&amp; plate, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; time, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; positionX, <span class="keyword">const</span> std::vector&lt;double&gt;&amp; positionY, std::vector&lt;std::vector&lt;std::vector&lt;double&gt;&gt;&gt;&amp; sol)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER) != 0)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_exn.html">Exn</a>((std::string(<span class="stringliteral">&quot;SDL_Init Error: &quot;</span>) + SDL_GetError()).c_str());</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    SDL_Window *window = SDL_CreateWindow(<span class="stringliteral">&quot;Heat equation solution for a bar&quot;</span>, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 1280, 720, SDL_WINDOW_SHOWN);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    SDL_Event event;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> quit = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> plot = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">while</span> (!quit)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">while</span> (SDL_PollEvent(&amp;event))</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">if</span> (event.type == SDL_QUIT)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                quit = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!plot)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; time.size(); i += 10)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    SDL_RenderClear(renderer);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    <span class="keywordtype">double</span> maxItem = <a class="code" href="sdl_8cpp.html#a5989af50308dd69fcab93e63a73a1d88">max</a>(sol[i]);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; position.size() - 1; j++)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                        SDL_RenderDrawLine(renderer, position[j] * 1280 / bar.<a class="code" href="class_bar.html#aed959fd048ad91636b51f358538786e1">getL</a>(), sol[i][j] * 720 / maxItem, position[j + 1] * 1280 / bar.<a class="code" href="class_bar.html#aed959fd048ad91636b51f358538786e1">getL</a>(), sol[i][j + 1] * 720 / maxItem);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                        SDL_RenderPresent(renderer);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                plot = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    SDL_DestroyRenderer(renderer);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    SDL_DestroyWindow(window);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    SDL_Quit();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_sdl.html#a1fadd49c3852c8b34e5d420c55a2e357">   85</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91">Sdl::SdlBarRunWindow</a>(<span class="keyword">const</span> <a class="code" href="class_plate.html">Plate</a> &amp;plate, <span class="keyword">const</span> std::vector&lt;double&gt; &amp;time, <span class="keyword">const</span> std::vector&lt;double&gt; &amp;positionX, <span class="keyword">const</span> std::vector&lt;double&gt; &amp;positionY, std::vector&lt;std::vector&lt;std::vector&lt;double&gt;&gt;&gt; &amp;sol)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER) != 0)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_exn.html">Exn</a>((std::string(<span class="stringliteral">&quot;SDL_Init Error: &quot;</span>) + SDL_GetError()).c_str());</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
 <div class="ttc" id="aclass_bar_html"><div class="ttname"><a href="class_bar.html">Bar</a></div><div class="ttdoc">Class for the bar model.</div><div class="ttdef"><b>Definition:</b> <a href="bar_8h_source.html#l00023">bar.h:24</a></div></div>
+<div class="ttc" id="aclass_bar_html_aed959fd048ad91636b51f358538786e1"><div class="ttname"><a href="class_bar.html#aed959fd048ad91636b51f358538786e1">Bar::getL</a></div><div class="ttdeci">double getL() const</div><div class="ttdoc">Get the L object.</div><div class="ttdef"><b>Definition:</b> <a href="bar_8h_source.html#l00062">bar.h:62</a></div></div>
 <div class="ttc" id="aclass_exn_html"><div class="ttname"><a href="class_exn.html">Exn</a></div><div class="ttdoc">Exception class.</div><div class="ttdef"><b>Definition:</b> <a href="exn_8h_source.html#l00022">exn.h:23</a></div></div>
 <div class="ttc" id="aclass_plate_html"><div class="ttname"><a href="class_plate.html">Plate</a></div><div class="ttdoc">Class representing a plate.</div><div class="ttdef"><b>Definition:</b> <a href="plate_8h_source.html#l00023">plate.h:24</a></div></div>
 <div class="ttc" id="aclass_sdl_html_a855bbadc37c0f1e224fb1c8c1ab579d4"><div class="ttname"><a href="class_sdl.html#a855bbadc37c0f1e224fb1c8c1ab579d4">Sdl::~Sdl</a></div><div class="ttdeci">~Sdl()</div><div class="ttdoc">Destroy the Sdl object.</div><div class="ttdef"><b>Definition:</b> <a href="sdl_8cpp_source.html#l00019">sdl.cpp:19</a></div></div>
-<div class="ttc" id="aclass_sdl_html_ab38899d27d92fbb2896dc0bb0f6d4c91"><div class="ttname"><a href="class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91">Sdl::SdlBarRunWindow</a></div><div class="ttdeci">static void SdlBarRunWindow(const Bar &amp;bar, const std::vector&lt; double &gt; &amp;time, const std::vector&lt; double &gt; &amp;position, std::vector&lt; std::vector&lt; double &gt;&gt; &amp;sol)</div><div class="ttdoc">Run the SDL window.</div><div class="ttdef"><b>Definition:</b> <a href="sdl_8cpp_source.html#l00023">sdl.cpp:23</a></div></div>
+<div class="ttc" id="aclass_sdl_html_ab38899d27d92fbb2896dc0bb0f6d4c91"><div class="ttname"><a href="class_sdl.html#ab38899d27d92fbb2896dc0bb0f6d4c91">Sdl::SdlBarRunWindow</a></div><div class="ttdeci">static void SdlBarRunWindow(const Bar &amp;bar, const std::vector&lt; double &gt; &amp;time, const std::vector&lt; double &gt; &amp;position, std::vector&lt; std::vector&lt; double &gt;&gt; &amp;sol)</div><div class="ttdoc">Run the SDL window.</div><div class="ttdef"><b>Definition:</b> <a href="sdl_8cpp_source.html#l00042">sdl.cpp:42</a></div></div>
 <div class="ttc" id="aclass_sdl_html_adc501e37d45c124f9382ded1a888f0a7"><div class="ttname"><a href="class_sdl.html#adc501e37d45c124f9382ded1a888f0a7">Sdl::Sdl</a></div><div class="ttdeci">Sdl()</div><div class="ttdoc">Construct a new Sdl object.</div><div class="ttdef"><b>Definition:</b> <a href="sdl_8cpp_source.html#l00015">sdl.cpp:15</a></div></div>
+<div class="ttc" id="asdl_8cpp_html_a5989af50308dd69fcab93e63a73a1d88"><div class="ttname"><a href="sdl_8cpp.html#a5989af50308dd69fcab93e63a73a1d88">max</a></div><div class="ttdeci">double max(const std::vector&lt; double &gt; &amp;v)</div><div class="ttdoc">Get the max of a double vector.</div><div class="ttdef"><b>Definition:</b> <a href="sdl_8cpp_source.html#l00029">sdl.cpp:29</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
