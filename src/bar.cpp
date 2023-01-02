@@ -61,7 +61,7 @@ void Bar::solve(const std::vector<double> &time, const std::vector<double> &posi
                         {
         for (size_t i = 0; i < position.size(); i++)
         {
-            C[i] = (time[1] - time[0]) * this->F(position[i]) / (mat.getDensity() * mat.getSpecificHeatCapacity());
+            C[i] = this->F(position[i]) / (mat.getDensity() * mat.getSpecificHeatCapacity());
         }; });
 
     const double dt = time[1] - time[0];
